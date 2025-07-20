@@ -3,9 +3,9 @@
 This project explores patterns in student digital behavior using **Association Rule Mining (ARM)**. It analyzes student activity logs to extract hidden associations that can help enhance learning outcomes and engagement.
 
 ## 👨‍💻 Authors
-- **Lagahid**
-- **Quijano**
-- **Tan**
+- **Kaye Marie Lagahid**
+- **James Quijano**
+- **Jhedver Tan**
 
 ## 🛠️ Tech Stack
 - **Frontend**: Angular (TypeScript)
@@ -17,17 +17,22 @@ This project explores patterns in student digital behavior using **Association R
 
 ```bash
 pagmulat_app/
-├── backend/                   # Django backend
-│   ├── manage.py
-│   ├── requirements.txt
-│   ├── pagmulat/              # Django project files
-│   └── mining/                # App for data mining logic
-│       ├── models.py
-│       ├── views.py
-│       ├── urls.py
-│       └── arm/               # Association Rule Mining logic
-│           ├── apriori.py
-│           └── preprocessing.py
+pagmulat_backend/
+├── data/
+│   ├── raw/
+│   └── processed/
+├── pagmulat_api/
+│   ├── data_preprocessing_transformation/
+│   │   ├── processors/
+│   │   ├── mappings/
+│   │   └── utils/
+│   ├── feature_engineering/
+│   ├── arm_mining/
+│   ├── data_synthesis/
+│   ├── model_training/
+│   └── __init__.py
+├── scripts/
+└── requirements.txt
 │
 ├── frontend/                  # Angular frontend
 │   ├── angular.json
