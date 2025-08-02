@@ -1,0 +1,278 @@
+[
+  {
+    "timestamp": "2025-08-03 03:48:34",
+    "input": {
+      "year_level": "Year_3",
+      "program": "BS Computer Science",
+      "age": 22,
+      "gender": "Female",
+      "lms_usage": "Often",
+      "code_platform_usage": "Sometimes",
+      "ai_usage": "Sometimes",
+      "social_media_usage": "Always",
+      "fixed_study_schedule": "Yes",
+      "study_hours": "3-4",
+      "study_start_time": "Evening",
+      "assignment_timeliness": "Often",
+      "collab_tools_usage": "Sometimes",
+      "sleep_time": "12 AM - 2 AM",
+      "burnout": "Often",
+      "study_breaks": "Yes",
+      "motivation": "Neutral",
+      "motivation_triggers": [
+        "Upcoming Deadlines",
+        "Exams",
+        "Parental/guardian pressure"
+      ],
+      "productivity": "Yes",
+      "productivity_tools": [
+        "Google Calender",
+        "Notion"
+      ],
+      "social_media_distraction": "Sometimes",
+      "distraction_platform": "TikTok",
+      "block_distractions": "No",
+      "academic_tools": [
+        "GitHub",
+        "VS Code/ IDEs"
+      ],
+      "digital_reliance": "Yes",
+      "digital_habits": "",
+      "digital_change": "",
+      "digital_reflection": ""
+    },
+    "prediction": "Highly Productive",
+    "predicted_class": "Productive_Yes",
+    "confidence": 54.7
+  },
+  {
+    "timestamp": "2025-08-03 03:48:31",
+    "input": {
+      "year_level": "Year_3",
+      "program": "BS Computer Science",
+      "age": 22,
+      "gender": "Female",
+      "lms_usage": "Often",
+      "code_platform_usage": "Sometimes",
+      "ai_usage": "Sometimes",
+      "social_media_usage": "Always",
+      "fixed_study_schedule": "Yes",
+      "study_hours": "3-4",
+      "study_start_time": "Evening",
+      "assignment_timeliness": "Often",
+      "collab_tools_usage": "Sometimes",
+      "sleep_time": "12 AM - 2 AM",
+      "burnout": "Often",
+      "study_breaks": "Yes",
+      "motivation": "Neutral",
+      "motivation_triggers": [
+        "Upcoming Deadlines",
+        "Exams",
+        "Parental/guardian pressure"
+      ],
+      "productivity": "Yes",
+      "productivity_tools": [
+        "Google Calender",
+        "Notion"
+      ],
+      "social_media_distraction": "Sometimes",
+      "distraction_platform": "TikTok",
+      "block_distractions": "No",
+      "academic_tools": [
+        "GitHub",
+        "VS Code/ IDEs"
+      ],
+      "digital_reliance": "Yes",
+      "digital_habits": "",
+      "digital_change": "",
+      "digital_reflection": ""
+    },
+    "prediction": "Highly Productive",
+    "predicted_class": "Productive_Yes",
+    "confidence": 54.7
+  },
+  {
+    "timestamp": "2025-08-03 03:42:55",
+    "input": {
+      "year_level": "Year_3",
+      "program": "BS Computer Science",
+      "age": 22,
+      "gender": "Female",
+      "lms_usage": "Often",
+      "code_platform_usage": "Sometimes",
+      "ai_usage": "Sometimes",
+      "social_media_usage": "Always",
+      "fixed_study_schedule": "Yes",
+      "study_hours": "3-4",
+      "study_start_time": "Evening",
+      "assignment_timeliness": "Often",
+      "collab_tools_usage": "Sometimes",
+      "sleep_time": "12 AM - 2 AM",
+      "burnout": "Often",
+      "study_breaks": "Yes",
+      "motivation": "Neutral",
+      "motivation_triggers": [
+        "Upcoming Deadlines",
+        "Exams",
+        "Parental/guardian pressure"
+      ],
+      "productivity": "Yes",
+      "productivity_tools": [
+        "Google Calender",
+        "Notion"
+      ],
+      "social_media_distraction": "Sometimes",
+      "distraction_platform": "TikTok",
+      "block_distractions": "No",
+      "academic_tools": [
+        "GitHub",
+        "VS Code/ IDEs"
+      ],
+      "digital_reliance": "Yes",
+      "digital_habits": "",
+      "digital_change": "",
+      "digital_reflection": ""
+    },
+    "prediction": "Highly Productive",
+    "predicted_class": "Productive_Yes",
+    "confidence": 54.7
+  },
+  {
+    "timestamp": "2025-08-03 03:40:12",
+    "input": {
+      "year_level": "Year_3",
+      "program": "BS Computer Science",
+      "age": 22,
+      "gender": "Female",
+      "lms_usage": "Often",
+      "code_platform_usage": "Sometimes",
+      "ai_usage": "Sometimes",
+      "social_media_usage": "Always",
+      "fixed_study_schedule": "Yes",
+      "study_hours": "3-4",
+      "study_start_time": "Evening",
+      "assignment_timeliness": "Often",
+      "collab_tools_usage": "Sometimes",
+      "sleep_time": "12 AM - 2 AM",
+      "burnout": "Often",
+      "study_breaks": "Yes",
+      "motivation": "Neutral",
+      "motivation_triggers": [
+        "Upcoming Deadlines",
+        "Exams",
+        "Parental/guardian pressure"
+      ],
+      "productivity": "Yes",
+      "productivity_tools": [
+        "Google Calender",
+        "Notion"
+      ],
+      "social_media_distraction": "Sometimes",
+      "distraction_platform": "TikTok",
+      "block_distractions": "No",
+      "academic_tools": [
+        "GitHub",
+        "VS Code/ IDEs"
+      ],
+      "digital_reliance": "Yes",
+      "digital_habits": "",
+      "digital_change": "",
+      "digital_reflection": ""
+    },
+    "prediction": "1",
+    "predicted_class": "1",
+    "confidence": 54.7
+  },
+  {
+    "timestamp": "2025-08-03 03:39:24",
+    "input": {
+      "year_level": "Year_3",
+      "program": "BS Computer Science",
+      "age": 22,
+      "gender": "Female",
+      "lms_usage": "Often",
+      "code_platform_usage": "Sometimes",
+      "ai_usage": "Sometimes",
+      "social_media_usage": "Always",
+      "fixed_study_schedule": "Yes",
+      "study_hours": "3-4",
+      "study_start_time": "Evening",
+      "assignment_timeliness": "Often",
+      "collab_tools_usage": "Sometimes",
+      "sleep_time": "12 AM - 2 AM",
+      "burnout": "Often",
+      "study_breaks": "Yes",
+      "motivation": "Neutral",
+      "motivation_triggers": [
+        "Upcoming Deadlines",
+        "Exams",
+        "Parental/guardian pressure"
+      ],
+      "productivity": "Yes",
+      "productivity_tools": [
+        "Google Calender",
+        "Notion"
+      ],
+      "social_media_distraction": "Sometimes",
+      "distraction_platform": "TikTok",
+      "block_distractions": "No",
+      "academic_tools": [
+        "GitHub",
+        "VS Code/ IDEs"
+      ],
+      "digital_reliance": "Yes",
+      "digital_habits": "",
+      "digital_change": "",
+      "digital_reflection": ""
+    },
+    "prediction": "1",
+    "predicted_class": "1",
+    "confidence": 54.7
+  },
+  {
+    "timestamp": "2025-08-03 03:38:29",
+    "input": {
+      "year_level": "Year_3",
+      "program": "BS Computer Science",
+      "age": 22,
+      "gender": "Female",
+      "lms_usage": "Often",
+      "code_platform_usage": "Sometimes",
+      "ai_usage": "Sometimes",
+      "social_media_usage": "Always",
+      "fixed_study_schedule": "Yes",
+      "study_hours": "3-4",
+      "study_start_time": "Evening",
+      "assignment_timeliness": "Often",
+      "collab_tools_usage": "Sometimes",
+      "sleep_time": "12 AM - 2 AM",
+      "burnout": "Often",
+      "study_breaks": "Yes",
+      "motivation": "Neutral",
+      "motivation_triggers": [
+        "Upcoming Deadlines",
+        "Exams",
+        "Parental/guardian pressure"
+      ],
+      "productivity": "Yes",
+      "productivity_tools": [
+        "Google Calender",
+        "Notion"
+      ],
+      "social_media_distraction": "Sometimes",
+      "distraction_platform": "TikTok",
+      "block_distractions": "No",
+      "academic_tools": [
+        "GitHub",
+        "VS Code/ IDEs"
+      ],
+      "digital_reliance": "Yes",
+      "digital_habits": "",
+      "digital_change": "",
+      "digital_reflection": ""
+    },
+    "prediction": "1",
+    "predicted_class": "1",
+    "confidence": 54.7
+  }
+]

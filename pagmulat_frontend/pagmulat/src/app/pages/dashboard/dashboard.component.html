@@ -1,43 +1,219 @@
-<div class="dashboard">
-  <header class="dashboard__header">
-    <h1 class="dashboard__title">Pagmulát Dashboard</h1>
+<div class="fixed inset-0 bg-base z-0"></div>
+<div class="dashboard relative p-4 md:p-8 min-h-screen flex flex-col max-w-6xl mx-auto box-border z-10">
+  <header class="text-center mb-10">
+    <!-- Eye-themed Logo for 'Pagmulát' (Awakening) -->
+    <svg class="w-20 h-20 mb-4 mx-auto text-primary-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+    </svg>
+    <h1 class="text-4xl font-bold text-primary-blue m-0">PAGMULáT</h1>
+    <p class="text-lg text-gray-600 mt-2 mb-0">Mining associative patterns in student digital behavior. Awakening change and improvement.</p>
   </header>
-  <main class="dashboard__main">
-    <section class="dashboard__section dashboard__section--metrics">
-      <div class="metric-card">
-            <span class="metric-card__title">Active Students</span>
-            <span class="metric-card__value">128</span>
-          </div>
-          <div class="metric-card">
-            <span class="metric-card__title">ARM Rules</span>
-            <span class="metric-card__value">42</span>
-          </div>
-          <div class="metric-card">
-            <span class="metric-card__title">Engagement Rate</span>
-            <span class="metric-card__value">87%</span>
-          </div>
-        </section>
 
-        <!-- New Section for Buttons -->
-        <section class="dashboard__section dashboard__section--actions">
-          <button class="dashboard__button">Deploy Model</button>
-          <button class="dashboard__button">Prediction History</button>
-        </section>
+  <main class="flex-grow flex flex-col gap-6">
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-primary-blue text-white rounded-xl shadow-light p-6 text-center flex flex-col items-center justify-center cursor-pointer transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-500 hover:text-white hover:scale-105" (click)="openDetail('students')">
+        <span class="text-xl font-semibold mb-2 opacity-90">Active Students</span>
+        <span class="text-5xl font-bold leading-none">{{ metrics.active_students || '—' }}</span>
+      </div>
+      <div class="bg-primary-blue text-white rounded-xl shadow-light p-6 text-center flex flex-col items-center justify-center cursor-pointer transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-500 hover:text-white hover:scale-105" (click)="openDetail('arm_rules')">
+        <span class="text-xl font-semibold mb-2 opacity-90">ARM Rules</span>
+        <span class="text-5xl font-bold leading-none">{{ metrics.arm_rules || '—' }}</span>
+      </div>
+      <div class="bg-primary-blue text-white rounded-xl shadow-light p-6 text-center flex flex-col items-center justify-center cursor-pointer transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-500 hover:text-white hover:scale-105" (click)="openDetail('itemsets')">
+        <span class="text-xl font-semibold mb-2 opacity-90">Frequent Itemsets</span>
+        <span class="text-5xl font-bold leading-none">{{ metrics.frequent_itemsets || '—' }}</span>
+      </div>
+    </section>
 
-        <section class="dashboard__section dashboard__section--results">
-          <div class="dashboard__content-block">
-            <h2 class="dashboard__subtitle">Association Rule Mining Results</h2>
-            <div class="placeholder">
-              (Results table will be shown here)
-            </div>
-          </div>
-
-          <div class="dashboard__content-block">
-            <h2 class="dashboard__subtitle">Visualizations</h2>
-            <div class="placeholder">
-              (Charts and graphs will be shown here)
-            </div>
-          </div>
-        </section>
-      </main>
+    <!-- Section for Buttons -->
+    <section class="flex flex-col sm:flex-row gap-4 mb-6 justify-center items-center">
+      <button class="py-3 px-7 text-lg font-semibold border-none rounded-xl cursor-pointer transition-all duration-300 ease-in-out flex-grow sm:flex-grow-0 sm:min-w-[180px] text-center whitespace-nowrap bg-white text-primary-blue border border-primary-blue shadow-light hover:bg-hover-blue-dark hover:text-white hover:translate-y-[-0.15rem] hover:shadow-hover active:translate-y-0 active:shadow-light" (click)="openSurveyModal()">Deploy Model</button>
+    <!-- Survey Modal -->
+    <div *ngIf="showSurveyModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
+      <div class="bg-white rounded-2xl shadow-2xl p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto relative animate-fade-in">
+        <button (click)="closeSurveyModal()" class="absolute top-3 right-3 text-gray-400 hover:text-primary-blue text-2xl font-bold">&times;</button>
+        <app-survey-form (close)="closeSurveyModal()"></app-survey-form>
+      </div>
     </div>
+      <button class="py-3 px-7 text-lg font-semibold border-none rounded-xl cursor-pointer transition-all duration-300 ease-in-out flex-grow sm:flex-grow-0 sm:min-w-[180px] text-center whitespace-nowrap bg-white text-primary-blue border border-primary-blue shadow-light hover:bg-hover-blue-dark hover:text-white hover:translate-y-[-0.15rem] hover:shadow-hover active:translate-y-0 active:shadow-light" (click)="openDetail('prediction_history')">Prediction History</button>
+    </section>
+
+    <section class="grid grid-cols-1 gap-6">
+      <div class="bg-white border border-light-gray-border rounded-xl shadow-light p-6 flex flex-col items-center justify-center min-h-[200px]">
+        <h2 class="text-2xl font-bold text-primary-blue mt-0 mb-4 text-center">Association Rule Mining Results</h2>
+        <p class="text-sm text-table-text text-center mb-4">
+          Thresholds:
+          Support &ge; {{ thresholds.support?.value }},
+          Confidence &ge; {{ thresholds.confidence?.value }},
+          Lift &gt; {{ thresholds.lift?.value }}
+        </p>
+        <!-- Mockup Table Content based on manuscript -->
+        <div class="overflow-x-auto w-full">
+            <table class="w-full border-collapse mt-4 text-sm">
+                <thead>
+                    <tr>
+                        <th class="border border-secondary-gray p-3 text-left bg-table-header-bg font-semibold text-dark-text">Antecedent (IF)</th>
+                        <th class="border border-secondary-gray p-3 text-left bg-table-header-bg font-semibold text-dark-text">Consequent (THEN)</th>
+                        <th class="border border-secondary-gray p-3 text-left bg-table-header-bg font-semibold text-dark-text">Support</th>
+                        <th class="border border-secondary-gray p-3 text-left bg-table-header-bg font-semibold text-dark-text">Confidence</th>
+                        <th class="border border-secondary-gray p-3 text-left bg-table-header-bg font-semibold text-dark-text">Lift</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let rule of rules" class="even:bg-white hover:bg-table-hover-bg">
+                    <td class="border border-secondary-gray p-3 text-table-text">{{ rule.antecedent }}</td>
+                    <td class="border border-secondary-gray p-3 text-table-text">{{ rule.consequent }}</td>
+                    <td class="border border-secondary-gray p-3 text-table-text">{{ rule.support }}</td>
+                    <td class="border border-secondary-gray p-3 text-table-text">{{ rule.confidence }}</td>
+                    <td class="border border-secondary-gray p-3 text-table-text">{{ rule.lift }}</td>
+                  </tr>
+                  <tr *ngIf="rules.length === 0">
+                    <td colspan="5" class="text-center text-gray-400">No rules found.</td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for detail view -->
+    <div *ngIf="showDetail" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div class="bg-white p-6 rounded-xl max-w-2xl w-full relative">
+        <button class="absolute top-2 right-2 text-gray-500 hover:text-black" (click)="showDetail = false">&times;</button>
+        <ng-container [ngSwitch]="detailType">
+          <div *ngSwitchCase="'students'">
+            <h3 class="text-xl font-bold mb-4">All Active Students</h3>
+            <div *ngIf="isLoadingDetail" class="flex justify-center items-center min-h-[120px]">
+              <span class="inline-block">
+                <span class="relative flex h-10 w-10">
+                  <span class="animate-spin inline-block w-full h-full rounded-full border-4 border-solid border-cyan-400 border-t-transparent"></span>
+                  <span class="sr-only">Loading...</span>
+                </span>
+              </span>
+            </div>
+            <div class="overflow-x-auto max-h-96" *ngIf="!isLoadingDetail">
+              <table class="w-full border-collapse text-sm">
+                <thead>
+                  <tr>
+                    <th class="border p-2">Student ID</th>
+                    <th class="border p-2">Name</th>
+                    <!-- Add more columns as needed -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let student of allStudents">
+                    <td class="border p-2">{{ student.id }}</td>
+                    <td class="border p-2">{{ student.name }}</td>
+                  </tr>
+                  <tr *ngIf="allStudents.length === 0">
+                    <td colspan="2" class="text-center text-gray-400">No students found.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div *ngSwitchCase="'arm_rules'">
+            <h3 class="text-xl font-bold mb-4">All Association Rules</h3>
+            <div *ngIf="isLoadingDetail" class="flex justify-center items-center min-h-[120px]">
+              <span class="inline-block">
+                <span class="relative flex h-10 w-10">
+                  <span class="animate-spin inline-block w-full h-full rounded-full border-4 border-solid border-cyan-400 border-t-transparent"></span>
+                  <span class="sr-only">Loading...</span>
+                </span>
+              </span>
+            </div>
+            <div class="overflow-x-auto max-h-96" *ngIf="!isLoadingDetail">
+              <table class="w-full border-collapse text-sm">
+                <thead>
+                  <tr>
+                    <th class="border p-2">Antecedent</th>
+                    <th class="border p-2">Consequent</th>
+                    <th class="border p-2">Support</th>
+                    <th class="border p-2">Confidence</th>
+                    <th class="border p-2">Lift</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let rule of allRules">
+                    <td class="border p-2">{{ rule.antecedent }}</td>
+                    <td class="border p-2">{{ rule.consequent }}</td>
+                    <td class="border p-2">{{ rule.support }}</td>
+                    <td class="border p-2">{{ rule.confidence }}</td>
+                    <td class="border p-2">{{ rule.lift }}</td>
+                  </tr>
+                  <tr *ngIf="allRules.length === 0">
+                    <td colspan="5" class="text-center text-gray-400">No rules found.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div *ngSwitchCase="'itemsets'">
+            <h3 class="text-xl font-bold mb-4">All Frequent Itemsets</h3>
+            <div *ngIf="isLoadingDetail" class="flex justify-center items-center min-h-[120px]">
+              <span class="inline-block">
+                <span class="relative flex h-10 w-10">
+                  <span class="animate-spin inline-block w-full h-full rounded-full border-4 border-solid border-cyan-400 border-t-transparent"></span>
+                  <span class="sr-only">Loading...</span>
+                </span>
+              </span>
+            </div>
+            <div class="overflow-x-auto max-h-96" *ngIf="!isLoadingDetail">
+              <table class="w-full border-collapse text-sm">
+                <thead>
+                  <tr>
+                    <th class="border p-2">Itemset</th>
+                    <th class="border p-2">Support</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let itemset of allItemsets">
+                    <td class="border p-2">{{ itemset.itemsets }}</td>
+                    <td class="border p-2">{{ itemset.support }}</td>
+                  </tr>
+                  <tr *ngIf="allItemsets.length === 0">
+                    <td colspan="2" class="text-center text-gray-400">No itemsets found.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div *ngSwitchCase="'prediction_history'">
+            <h3 class="text-xl font-bold mb-4">Prediction History</h3>
+            <div *ngIf="isLoadingDetail" class="flex justify-center items-center min-h-[120px]">
+              <span class="inline-block">
+                <span class="relative flex h-10 w-10">
+                  <span class="animate-spin inline-block w-full h-full rounded-full border-4 border-solid border-cyan-400 border-t-transparent"></span>
+                  <span class="sr-only">Loading...</span>
+                </span>
+              </span>
+            </div>
+            <div class="overflow-x-auto max-h-96" *ngIf="!isLoadingDetail">
+              <table class="w-full border-collapse text-sm">
+                <thead>
+                  <tr>
+                    <th class="border p-2">Timestamp</th>
+                    <th class="border p-2">Input</th>
+                    <th class="border p-2">Prediction</th>
+                    <th class="border p-2">Confidence</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let record of predictionHistory">
+                    <td class="border p-2">{{ record.timestamp }}</td>
+                    <td class="border p-2">{{ record.input | json }}</td>
+                    <td class="border p-2">{{ record.prediction }}</td>
+                    <td class="border p-2">{{ record.confidence }}%</td>
+                  </tr>
+                  <tr *ngIf="predictionHistory.length === 0">
+                    <td colspan="4" class="text-center text-gray-400">No prediction history found.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </main>
+</div>
