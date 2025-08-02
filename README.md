@@ -34,14 +34,44 @@ pagmulat_backend/
 ├── scripts/
 └── requirements.txt
 │
-├── frontend/                  # Angular frontend
-│   ├── angular.json
-│   ├── package.json
-│   └── src/
-│       ├── app/
-│       │   ├── components/
-│       │   ├── services/
-│       │   └── pages/
-│       └── assets/
+├── pagmulat_frontend/
+│   └── pagmulat/
+│       ├── angular.json
+│       ├── package.json
+│       └── src/
+│           ├── app/
+│           │   ├── core/
+│           │   │   ├── core.module.ts
+│           │   │   └── services/
+│           │   │       ├── api.service.ts
+│           │   │       └── arm.service.ts
+│           │   ├── shared/
+│           │   │   ├── shared.module.ts
+│           │   │   ├── pipes/
+│           │   │   │   └── format-confidence.pipe.ts
+│           │   │   └── components/
+│           │   │       ├── file-uploader/
+│           │   │       ├── metrics-card/
+│           │   │       └── rules-table/
+│           │   ├── pages/
+│           │   │   ├── analysis/
+│           │   │   │   ├── analysis.module.ts
+│           │   │   │   ├── analysis.component.ts
+│           │   │   │   ├── parameter-form/
+│           │   │   │   │   └── parameter-form.component.ts
+│           │   │   │   └── visualization/
+│           │   │   │       └── visualization.component.ts
+│           │   │   ├── dashboard/
+│           │   │   │   ├── dashboard.module.ts
+│           │   │   │   └── dashboard.component.ts
+│           │   │   └── upload/
+│           │   │       └── upload.module.ts
+│           │   ├── services/
+│           │   │   └── data.service.ts
+│           │   ├── app.module.ts
+│           │   ├── app-routing.module.ts
+│           └── assets/
+│               ├── images/
+│               └── data/
 │
 └── README.md

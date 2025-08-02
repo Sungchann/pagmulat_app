@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-parameter-form',
   templateUrl: './parameter-form.component.html',
-  styleUrls: ['./parameter-form.component.scss']
+  styleUrls: ['./parameter-form.component.css']
 })
 export class ParameterFormComponent {
   // Parameter form logic here
