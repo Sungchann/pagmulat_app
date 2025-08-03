@@ -1,5 +1,596 @@
 [
   {
+    "timestamp": "2025-08-03 22:56:22",
+    "input": {
+      "year_level": "Year_3",
+      "program": "BS Computer Science",
+      "age": 20,
+      "gender": "Male",
+      "lms_usage": "Always",
+      "code_platform_usage": "Always",
+      "ai_usage": "Sometimes",
+      "social_media_usage": "Rarely",
+      "fixed_study_schedule": "Yes",
+      "study_hours": ">5",
+      "study_start_time": "Morning",
+      "assignment_timeliness": "Always",
+      "collab_tools_usage": "Always",
+      "sleep_time": "Before 10 PM",
+      "burnout": "Never",
+      "study_breaks": "Yes",
+      "motivation": "Very motivated",
+      "motivation_triggers": [
+        "Upcoming Deadlines",
+        "Exams",
+        "Study group discussions",
+        "Personal goals",
+        "Instructor reminders"
+      ],
+      "productivity": "Yes",
+      "productivity_tools": [
+        "Trello",
+        "Notion",
+        "Google Calender",
+        "Pomodoro Timer",
+        "Forest App"
+      ],
+      "social_media_distraction": "Never",
+      "distraction_platform": "Other",
+      "block_distractions": "Yes",
+      "academic_tools": [
+        "Google Classroom",
+        "Zoom/ Google Meet",
+        "GitHub",
+        "VS Code/ IDEs",
+        "Replit/ Online compilers",
+        "ChatGPT or similiar",
+        "Discord/ Slack"
+      ],
+      "digital_reliance": "No",
+      "digital_habits": "Consistent use of Notion for organizing tasks and minimizing multitasking to stay focused.",
+      "digital_change": "Occasional passive scrolling on YouTube Shorts—plan to set daily limits.",
+      "digital_reflection": "Yes. They positively affect my performance. Structured digital routines and tool use help me stay on track, reduce procrastination, and enhance retention of material."
+    },
+    "prediction": "Highly Productive",
+    "confidence": 73.3,
+    "method": "Association Rule Mining",
+    "matching_rules": 172,
+    "reasoning": [
+      "Based on rule: IF [Code_Compiler_Usage_Always, Program_CS] THEN [Productive_Yes] (Confidence: 73.3%)"
+    ]
+  },
+  {
+    "timestamp": "2025-08-03 22:46:41",
+    "input": {
+      "year_level": "Year_1",
+      "program": "BS Information Technology",
+      "age": 18,
+      "gender": "Male",
+      "lms_usage": "Never",
+      "code_platform_usage": "Never",
+      "ai_usage": "Always",
+      "social_media_usage": "Always",
+      "fixed_study_schedule": "No",
+      "study_hours": "<1",
+      "study_start_time": "Late Night (after 10pm)",
+      "assignment_timeliness": "Rarely",
+      "collab_tools_usage": "Never",
+      "sleep_time": "10 PM - 12AM",
+      "burnout": "Rarely",
+      "study_breaks": "Yes",
+      "motivation": "Not motivated",
+      "motivation_triggers": [
+        "Upcoming Deadlines"
+      ],
+      "productivity": "Sometimes",
+      "productivity_tools": [
+        "None"
+      ],
+      "social_media_distraction": "Always",
+      "distraction_platform": "Facebook",
+      "block_distractions": "No",
+      "academic_tools": [
+        "ChatGPT or similiar"
+      ],
+      "digital_reliance": "Yes",
+      "digital_habits": "",
+      "digital_change": "",
+      "digital_reflection": ""
+    },
+    "prediction": "No Matching Patterns",
+    "confidence": 0.0,
+    "method": "Association Rule Mining",
+    "matching_rules": 0,
+    "reasoning": [
+      "No association rules match your responses"
+    ]
+  },
+  {
+    "timestamp": "2025-08-03 22:43:18",
+    "input": {
+      "year_level": "Year_1",
+      "program": "BS Information Technology",
+      "age": 18,
+      "gender": "Male",
+      "lms_usage": "Rarely",
+      "code_platform_usage": "Never",
+      "ai_usage": "Always",
+      "social_media_usage": "Always",
+      "fixed_study_schedule": "No",
+      "study_hours": "<1",
+      "study_start_time": "Afternoon",
+      "assignment_timeliness": "Rarely",
+      "collab_tools_usage": "Rarely",
+      "sleep_time": "After 2 AM",
+      "burnout": "Rarely",
+      "study_breaks": "Yes",
+      "motivation": "Slightly motivated",
+      "motivation_triggers": [
+        "Upcoming Deadlines",
+        "Parental/guardian pressure",
+        "Instructor reminders"
+      ],
+      "productivity": "Sometimes",
+      "productivity_tools": [
+        "None"
+      ],
+      "social_media_distraction": "Always",
+      "distraction_platform": "Facebook",
+      "block_distractions": "No",
+      "academic_tools": [
+        "ChatGPT or similiar"
+      ],
+      "digital_reliance": "Yes",
+      "digital_habits": "",
+      "digital_change": "",
+      "digital_reflection": ""
+    },
+    "prediction": "No Matching Patterns",
+    "confidence": 0.0,
+    "method": "Association Rule Mining",
+    "matching_rules": 0,
+    "reasoning": [
+      "No association rules match your responses"
+    ]
+  },
+  {
+    "timestamp": "2025-08-03 21:28:28",
+    "input": {
+      "year_level": "Year_3",
+      "program": "BS Computer Science",
+      "age": 20,
+      "gender": "Male",
+      "lms_usage": "Always",
+      "code_platform_usage": "Always",
+      "ai_usage": "Always",
+      "social_media_usage": "Rarely",
+      "fixed_study_schedule": "Yes",
+      "study_hours": ">5",
+      "study_start_time": "Morning",
+      "assignment_timeliness": "Always",
+      "collab_tools_usage": "Always",
+      "sleep_time": "Before 10 PM",
+      "burnout": "Never",
+      "study_breaks": "Yes",
+      "motivation": "Very motivated",
+      "motivation_triggers": [
+        "Exams",
+        "Upcoming Deadlines",
+        "Study group discussions",
+        "Personal goals",
+        "Instructor reminders"
+      ],
+      "productivity": "Yes",
+      "productivity_tools": [
+        "Notion",
+        "Trello",
+        "Google Calender",
+        "Pomodoro Timer",
+        "Forest App"
+      ],
+      "social_media_distraction": "Never",
+      "distraction_platform": "Other",
+      "block_distractions": "Yes",
+      "academic_tools": [
+        "Google Classroom",
+        "Zoom/ Google Meet",
+        "GitHub",
+        "VS Code/ IDEs",
+        "Replit/ Online compilers",
+        "ChatGPT or similiar",
+        "Discord/ Slack"
+      ],
+      "digital_reliance": "No",
+      "digital_habits": "Consistent use of Notion for organizing tasks and minimizing multitasking to stay focused.",
+      "digital_change": "Occasional passive scrolling on YouTube Shorts—plan to set daily limits.",
+      "digital_reflection": "Yes. They positively affect my performance. Structured digital routines and tool use help me stay on track, reduce procrastination, and enhance retention of material."
+    },
+    "prediction": "No Matching Patterns",
+    "confidence": 0.0,
+    "method": "Association Rule Mining",
+    "matching_rules": 0,
+    "reasoning": [
+      "No association rules match your responses"
+    ]
+  },
+  {
+    "timestamp": "2025-08-03 21:26:48",
+    "input": {
+      "year_level": "Year_3",
+      "program": "BS Computer Science",
+      "age": 20,
+      "gender": "Male",
+      "lms_usage": "Always",
+      "code_platform_usage": "Always",
+      "ai_usage": "Always",
+      "social_media_usage": "Rarely",
+      "fixed_study_schedule": "Yes",
+      "study_hours": ">5",
+      "study_start_time": "Morning",
+      "assignment_timeliness": "Always",
+      "collab_tools_usage": "Always",
+      "sleep_time": "Before 10 PM",
+      "burnout": "Never",
+      "study_breaks": "Yes",
+      "motivation": "Very motivated",
+      "motivation_triggers": [
+        "Exams",
+        "Upcoming Deadlines",
+        "Study group discussions",
+        "Personal goals",
+        "Instructor reminders"
+      ],
+      "productivity": "Yes",
+      "productivity_tools": [
+        "Notion",
+        "Trello",
+        "Google Calender",
+        "Pomodoro Timer",
+        "Forest App"
+      ],
+      "social_media_distraction": "Never",
+      "distraction_platform": "Other",
+      "block_distractions": "Yes",
+      "academic_tools": [
+        "Google Classroom",
+        "Zoom/ Google Meet",
+        "GitHub",
+        "VS Code/ IDEs",
+        "Replit/ Online compilers",
+        "ChatGPT or similiar",
+        "Discord/ Slack"
+      ],
+      "digital_reliance": "No",
+      "digital_habits": "Consistent use of Notion for organizing tasks and minimizing multitasking to stay focused.",
+      "digital_change": "Occasional passive scrolling on YouTube Shorts—plan to set daily limits.",
+      "digital_reflection": "Yes. They positively affect my performance. Structured digital routines and tool use help me stay on track, reduce procrastination, and enhance retention of material."
+    },
+    "prediction": "No Matching Patterns",
+    "confidence": 0.0,
+    "method": "Association Rule Mining",
+    "matching_rules": 0,
+    "reasoning": [
+      "No association rules match your responses"
+    ]
+  },
+  {
+    "timestamp": "2025-08-03 18:51:05",
+    "input": {
+      "year_level": "Year_3",
+      "program": "BS Computer Science",
+      "age": 20,
+      "gender": "Male",
+      "lms_usage": "Always",
+      "code_platform_usage": "Always",
+      "ai_usage": "Always",
+      "social_media_usage": "Rarely",
+      "fixed_study_schedule": "Yes",
+      "study_hours": ">5",
+      "study_start_time": "Morning",
+      "assignment_timeliness": "Always",
+      "collab_tools_usage": "Always",
+      "sleep_time": "Before 10 PM",
+      "burnout": "Never",
+      "study_breaks": "Yes",
+      "motivation": "Very motivated",
+      "motivation_triggers": [
+        "Upcoming Deadlines",
+        "Exams",
+        "Study group discussions",
+        "Personal goals",
+        "Instructor reminders"
+      ],
+      "productivity": "Yes",
+      "productivity_tools": [
+        "Notion",
+        "Trello",
+        "Google Calender",
+        "Pomodoro Timer",
+        "Forest App"
+      ],
+      "social_media_distraction": "Never",
+      "distraction_platform": "Other",
+      "block_distractions": "Yes",
+      "academic_tools": [
+        "Google Classroom",
+        "Zoom/ Google Meet",
+        "GitHub",
+        "VS Code/ IDEs",
+        "Replit/ Online compilers",
+        "ChatGPT or similiar",
+        "Discord/ Slack"
+      ],
+      "digital_reliance": "No",
+      "digital_habits": "Consistent use of Notion for organizing tasks and minimizing multitasking to stay focused.",
+      "digital_change": "Occasional passive scrolling on YouTube Shorts—plan to set daily limits.",
+      "digital_reflection": "Yes. They positively affect my performance. Structured digital routines and tool use help me stay on track, reduce procrastination, and enhance retention of material."
+    },
+    "prediction": "Uncertain",
+    "confidence": 40.0,
+    "method": "Association Rule Mining",
+    "matching_rules": 4,
+    "reasoning": [
+      "Insufficient patterns for strong prediction"
+    ]
+  },
+  {
+    "timestamp": "2025-08-03 14:56:28",
+    "input": {
+      "year_level": "Year_3",
+      "program": "BS Computer Science",
+      "age": 21,
+      "gender": "Male",
+      "lms_usage": "Always",
+      "code_platform_usage": "Always",
+      "ai_usage": "Always",
+      "social_media_usage": "Rarely",
+      "fixed_study_schedule": "Yes",
+      "study_hours": ">5",
+      "study_start_time": "Morning",
+      "assignment_timeliness": "Always",
+      "collab_tools_usage": "Always",
+      "sleep_time": "Before 10 PM",
+      "burnout": "Never",
+      "study_breaks": "Yes",
+      "motivation": "Very motivated",
+      "motivation_triggers": [
+        "Upcoming Deadlines",
+        "Exams",
+        "Study group discussions",
+        "Personal goals",
+        "Instructor reminders",
+        "Parental/guardian pressure"
+      ],
+      "productivity": "Yes",
+      "productivity_tools": [
+        "Trello",
+        "Notion",
+        "Google Calender",
+        "Pomodoro Timer",
+        "Forest App"
+      ],
+      "social_media_distraction": "Never",
+      "distraction_platform": "Other",
+      "block_distractions": "Yes",
+      "academic_tools": [
+        "Google Classroom",
+        "Zoom/ Google Meet",
+        "GitHub",
+        "VS Code/ IDEs",
+        "Replit/ Online compilers",
+        "ChatGPT or similiar",
+        "Discord/ Slack"
+      ],
+      "digital_reliance": "No",
+      "digital_habits": "Consistent use of Notion for organizing tasks and minimizing multitasking to stay focused.",
+      "digital_change": "Occasional passive scrolling on YouTube Shortsâ€”plan to set daily limits.",
+      "digital_reflection": "Yes. They positively affect my performance. Structured digital routines and tool use help me stay on track, reduce procrastination, and enhance retention of material."
+    },
+    "prediction": "Highly Productive",
+    "predicted_class": "Productive_Yes",
+    "confidence": 65.0
+  },
+  {
+    "timestamp": "2025-08-03 14:45:48",
+    "input": {
+      "year_level": "Year_4",
+      "program": "BS Computer Science",
+      "age": 22,
+      "gender": "Male",
+      "lms_usage": "Always",
+      "code_platform_usage": "Always",
+      "ai_usage": "Never",
+      "social_media_usage": "Rarely",
+      "fixed_study_schedule": "Yes",
+      "study_hours": ">5",
+      "study_start_time": "Afternoon",
+      "assignment_timeliness": "Always",
+      "collab_tools_usage": "Always",
+      "sleep_time": "10 PM - 12AM",
+      "burnout": "Rarely",
+      "study_breaks": "Yes",
+      "motivation": "Very motivated",
+      "motivation_triggers": [
+        "Upcoming Deadlines",
+        "Exams",
+        "Study group discussions",
+        "Personal goals",
+        "Instructor reminders"
+      ],
+      "productivity": "Yes",
+      "productivity_tools": [
+        "Notion",
+        "Other"
+      ],
+      "social_media_distraction": "Rarely",
+      "distraction_platform": "Youtube",
+      "block_distractions": "Yes",
+      "academic_tools": [
+        "Zoom/ Google Meet",
+        "GitHub",
+        "VS Code/ IDEs",
+        "Replit/ Online compilers",
+        "Discord/ Slack"
+      ],
+      "digital_reliance": "No",
+      "digital_habits": "",
+      "digital_change": "",
+      "digital_reflection": ""
+    },
+    "prediction": "Highly Productive",
+    "predicted_class": "Productive_Yes",
+    "confidence": 66.0
+  },
+  {
+    "timestamp": "2025-08-03 14:44:20",
+    "input": {
+      "year_level": "Year_4",
+      "program": "BS Computer Science",
+      "age": 22,
+      "gender": "Male",
+      "lms_usage": "Always",
+      "code_platform_usage": "Always",
+      "ai_usage": "Sometimes",
+      "social_media_usage": "Often",
+      "fixed_study_schedule": "Yes",
+      "study_hours": ">5",
+      "study_start_time": "Morning",
+      "assignment_timeliness": "Always",
+      "collab_tools_usage": "Always",
+      "sleep_time": "12 AM - 2 AM",
+      "burnout": "Sometimes",
+      "study_breaks": "Yes",
+      "motivation": "Very motivated",
+      "motivation_triggers": [
+        "Upcoming Deadlines",
+        "Exams",
+        "Study group discussions",
+        "Personal goals",
+        "Instructor reminders"
+      ],
+      "productivity": "Yes",
+      "productivity_tools": [
+        "Notion",
+        "Other"
+      ],
+      "social_media_distraction": "Rarely",
+      "distraction_platform": "Youtube",
+      "block_distractions": "Yes",
+      "academic_tools": [
+        "Zoom/ Google Meet",
+        "GitHub",
+        "VS Code/ IDEs",
+        "Replit/ Online compilers",
+        "Discord/ Slack"
+      ],
+      "digital_reliance": "No",
+      "digital_habits": "Using pomodoro timer",
+      "digital_change": "",
+      "digital_reflection": ""
+    },
+    "prediction": "Highly Productive",
+    "predicted_class": "Productive_Yes",
+    "confidence": 52.0
+  },
+  {
+    "timestamp": "2025-08-03 14:38:37",
+    "input": {
+      "year_level": "Year_3",
+      "program": "BS Information Technology",
+      "age": 21,
+      "gender": "Female",
+      "lms_usage": "Often",
+      "code_platform_usage": "Often",
+      "ai_usage": "Always",
+      "social_media_usage": "Always",
+      "fixed_study_schedule": "Yes",
+      "study_hours": "3-4",
+      "study_start_time": "Late Night (after 10pm)",
+      "assignment_timeliness": "Often",
+      "collab_tools_usage": "Always",
+      "sleep_time": "After 2 AM",
+      "burnout": "Always",
+      "study_breaks": "Yes",
+      "motivation": "Neutral",
+      "motivation_triggers": [
+        "Upcoming Deadlines",
+        "Exams",
+        "Study group discussions"
+      ],
+      "productivity": "Sometimes",
+      "productivity_tools": [
+        "Notion",
+        "Trello",
+        "Pomodoro Timer",
+        "Other"
+      ],
+      "social_media_distraction": "Often",
+      "distraction_platform": "TikTok",
+      "block_distractions": "No",
+      "academic_tools": [
+        "Google Classroom",
+        "ChatGPT or similiar",
+        "Other",
+        "VS Code/ IDEs"
+      ],
+      "digital_reliance": "Not sure",
+      "digital_habits": "Habitual research",
+      "digital_change": "Consistency and my ability to focus on programming without distractions or using AI tools",
+      "digital_reflection": ""
+    },
+    "prediction": "Low Productivity",
+    "predicted_class": "Productive_No",
+    "confidence": 70.0
+  },
+  {
+    "timestamp": "2025-08-03 14:22:41",
+    "input": {
+      "year_level": "Year_2",
+      "program": "BS Entertainment & Multimedia Computing",
+      "age": 20,
+      "gender": "Prefer not to say",
+      "lms_usage": "Often",
+      "code_platform_usage": "Rarely",
+      "ai_usage": "Often",
+      "social_media_usage": "Often",
+      "fixed_study_schedule": "Yes",
+      "study_hours": ">5",
+      "study_start_time": "Evening",
+      "assignment_timeliness": "Always",
+      "collab_tools_usage": "Sometimes",
+      "sleep_time": "12 AM - 2 AM",
+      "burnout": "Sometimes",
+      "study_breaks": "No",
+      "motivation": "Motivated",
+      "motivation_triggers": [
+        "Upcoming Deadlines",
+        "Instructor reminders",
+        "Parental/guardian pressure",
+        "Exams"
+      ],
+      "productivity": "Yes",
+      "productivity_tools": [
+        "None",
+        "Other"
+      ],
+      "social_media_distraction": "Always",
+      "distraction_platform": "Facebook",
+      "block_distractions": "No",
+      "academic_tools": [
+        "Google Classroom",
+        "ChatGPT or similiar",
+        "Discord/ Slack"
+      ],
+      "digital_reliance": "No",
+      "digital_habits": "",
+      "digital_change": "",
+      "digital_reflection": ""
+    },
+    "prediction": "Low Productivity",
+    "predicted_class": "Productive_No",
+    "confidence": 61.6
+  },
+  {
     "timestamp": "2025-08-03 03:48:34",
     "input": {
       "year_level": "Year_3",

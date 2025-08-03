@@ -1,14 +1,7 @@
 {
   "model": {
-    "accuracy": 0.9473684210526315,
-    "test_size": 19,
-    "train_size": 75,
-    "target": "Productive_Yes",
-    "class_map": {
-      "0": "Productive_No",
-      "1": "Productive_Yes",
-      "2": "Productive_Sometimes"
-    },
+    "algorithm": "Apriori Association Rule Mining",
+    "data_records": 94,
     "features": [
       "Year_1",
       "Year_2",
@@ -81,6 +74,7 @@
       "MotivationTrigger_Upcoming Deadlines",
       "Productive_No",
       "Productive_Sometimes",
+      "Productive_Yes",
       "ProductivityTool_ChatGPT",
       "ProductivityTool_Google Calender",
       "ProductivityTool_Google Docs",
@@ -121,29 +115,54 @@
       "reduce_ai_dependence",
       "uses_official_docs",
       "time_awareness"
-    ]
+    ],
+    "frequent_itemsets": 74244,
+    "total_rules": 224919,
+    "productivity_rules": 3706,
+    "top_confidence": 1.0,
+    "avg_confidence": 0.7861800562869563
   },
   "arm": {
-    "min_support": 0.15,
+    "min_support": 0.1,
     "min_confidence": 0.65,
     "min_lift": 1.2,
-    "num_rules": 17856,
-    "num_itemsets": 12276,
+    "num_rules": 224919,
+    "num_itemsets": 74244,
     "top_rules": [
       {
-        "antecedent": "Over Reliance Yes, ProductivityTool None, Social Media Daily Visit Always, Study Hours Outside Class Less than 1 hour",
-        "consequent": "Fixed Study Schedule No",
-        "confidence": 1.0
+        "antecedent": "AcademicPlatform ChatGPT or similiar, Age 21 23, MotivationTrigger Exams, Highly Productive, Regular Breaks Studying Yes",
+        "consequent": "MotivationTrigger Upcoming Deadlines",
+        "confidence": 1.0,
+        "lift": 1.47,
+        "support": 0.117
       },
       {
-        "antecedent": "Distraction Blocking No, MotivationTrigger Exams, MotivationTrigger Upcoming Deadlines, Motivation Neutral",
+        "antecedent": "Uses ChatGPT Regularly, Distracting Platform TikTok, Distraction Blocking No, MotivationTrigger Upcoming Deadlines, Late Night Studying",
+        "consequent": "MotivationTrigger Exams",
+        "confidence": 1.0,
+        "lift": 1.54,
+        "support": 0.117
+      },
+      {
+        "antecedent": "AcademicPlatform Discord/ Slack, AcademicPlatform GitHub, AcademicPlatform VS Code/ IDEs, Age 21 23, Late Night Studying",
+        "consequent": "Fixed Study Schedule No",
+        "confidence": 1.0,
+        "lift": 1.25,
+        "support": 0.128
+      },
+      {
+        "antecedent": "AcademicPlatform VS Code/ IDEs, Age 21 23, Fixed Study Schedule No, MotivationTrigger Personal goals, Social Media Daily Visit Always",
+        "consequent": "AcademicPlatform ChatGPT or similiar",
+        "confidence": 1.0,
+        "lift": 1.34,
+        "support": 0.106
+      },
+      {
+        "antecedent": "AcademicPlatform ChatGPT or similiar, Uses ChatGPT Regularly, Fixed Study Schedule No, MotivationTrigger Upcoming Deadlines, Submit Assignments On Time Often",
         "consequent": "Over Reliance Yes",
-        "confidence": 1.0
-      },
-      {
-        "antecedent": "Uses ChatGPT Regularly, Distraction Blocking No, Social Media Daily Visit Always, Study Hours Outside Class Less than 1 hour",
-        "consequent": "Fixed Study Schedule No",
-        "confidence": 1.0
+        "confidence": 1.0,
+        "lift": 1.36,
+        "support": 0.106
       }
     ]
   }

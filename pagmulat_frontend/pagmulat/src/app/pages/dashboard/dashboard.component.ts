@@ -13,7 +13,11 @@ export class DashboardComponent implements OnInit {
   showDetail = false;
   detailType = '';
   isLoadingDetail = false;
-  metrics: any = {};
+  metrics: any = {
+    active_students: 0,
+    arm_rules: 0,
+    frequent_itemsets: 0
+  };
   thresholds: any = {};
   rules: any[] = [];
   allStudents: any[] = [];
@@ -24,17 +28,33 @@ export class DashboardComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.loadDashboard();
+    this.loadArmMetrics();
   }
 
-  loadDashboard(): void {
-    this.apiService.getDashboard().subscribe({
-      next: (data) => {
-        this.metrics = data.metrics;
-        this.thresholds = data.thresholds;
-        this.rules = data.rules_table;
+  loadArmMetrics(): void {
+    // Load ARM dashboard metrics to populate dashboard
+    this.apiService.getArmDashboard().subscribe({
+      next: (data: any) => {
+        console.log('ARM Dashboard data received:', JSON.stringify(data, null, 2));
+        if (data && data.metrics) {
+          this.metrics = data.metrics;
+          this.thresholds = data.thresholds || {};
+          this.rules = data.rules_table || [];
+          console.log('Updated metrics:', JSON.stringify(this.metrics, null, 2));
+          console.log('Rules:', this.rules.length, 'rules loaded');
+        } else {
+          console.warn('Invalid data structure received:', data);
+        }
       },
-      error: (err) => console.error('Dashboard load failed', err)
+      error: (err) => {
+        console.error('Failed to load ARM metrics', err);
+        // Set default values on error
+        this.metrics = {
+          active_students: '—',
+          arm_rules: '—',
+          frequent_itemsets: '—'
+        };
+      }
     });
   }
 

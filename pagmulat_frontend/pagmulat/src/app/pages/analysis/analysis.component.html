@@ -1,7 +1,72 @@
 <div class="bg-gray-50 min-h-screen p-8 flex flex-col items-center">
   <h2 class="text-2xl font-bold text-gray-800 mb-6">Analysis Page</h2>
   <div class="w-full max-w-4xl bg-white rounded-lg shadow p-6">
-    <!-- Add analysis layout here -->
-    <p class="text-gray-600">No analysis data yet.</p>
+    <ng-container *ngIf="loading">
+      <p class="text-blue-600">Loading ARM results...</p>
+    </ng-container>
+    <ng-container *ngIf="error">
+      <p class="text-red-600">{{ error }}</p>
+    </ng-container>
+    <ng-container *ngIf="metadata && !loading && !error">
+      <h3 class="text-lg font-semibold mb-2">ARM Model Summary</h3>
+      <ul class="mb-4 text-gray-700">
+        <li>Algorithm: {{ metadata.model.algorithm }}</li>
+        <li>Records: {{ metadata.model.data_records }}</li>
+        <li>Features: {{ metadata.model.features.length }}</li>
+        <li>Total Rules: {{ metadata.model.total_rules }}</li>
+        <li>Productivity Rules: {{ metadata.model.productivity_rules }}</li>
+        <li>Avg. Confidence: {{ metadata.model.avg_confidence | percent:'1.0-1' }}</li>
+        <li>Top Confidence: {{ metadata.model.top_confidence | percent:'1.0-1' }}</li>
+      </ul>
+      <h4 class="font-semibold mb-2">Top Rules</h4>
+      <table class="min-w-full text-sm mb-6">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="px-2 py-1 text-left">#</th>
+            <th class="px-2 py-1 text-left">If (Antecedent)</th>
+            <th class="px-2 py-1 text-left">Then (Consequent)</th>
+            <th class="px-2 py-1 text-left">Confidence</th>
+            <th class="px-2 py-1 text-left">Lift</th>
+            <th class="px-2 py-1 text-left">Support</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let rule of metadata.arm.top_rules; let i = index">
+            <td class="px-2 py-1">{{ i+1 }}</td>
+            <td class="px-2 py-1">{{ rule.antecedent }}</td>
+            <td class="px-2 py-1">{{ rule.consequent }}</td>
+            <td class="px-2 py-1">{{ rule.confidence | percent:'1.0-1' }}</td>
+            <td class="px-2 py-1">{{ rule.lift }}</td>
+            <td class="px-2 py-1">{{ rule.support }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </ng-container>
+    <ng-container *ngIf="rules.length && !loading && !error">
+      <h4 class="font-semibold mb-2">All Association Rules</h4>
+      <table class="min-w-full text-xs">
+        <thead>
+          <tr class="bg-gray-50">
+            <th class="px-1 py-1 text-left">If (Antecedent)</th>
+            <th class="px-1 py-1 text-left">Then (Consequent)</th>
+            <th class="px-1 py-1 text-left">Confidence</th>
+            <th class="px-1 py-1 text-left">Lift</th>
+            <th class="px-1 py-1 text-left">Support</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let rule of rules">
+            <td class="px-1 py-1">{{ rule.antecedent }}</td>
+            <td class="px-1 py-1">{{ rule.consequent }}</td>
+            <td class="px-1 py-1">{{ rule.confidence | percent:'1.0-1' }}</td>
+            <td class="px-1 py-1">{{ rule.lift }}</td>
+            <td class="px-1 py-1">{{ rule.support }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </ng-container>
+    <ng-container *ngIf="!rules.length && !loading && !error">
+      <p class="text-gray-600">No association rules found for the current thresholds.</p>
+    </ng-container>
   </div>
 </div>
