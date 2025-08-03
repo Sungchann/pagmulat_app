@@ -11,9 +11,28 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getDashboard(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/dashboard/`);
+  /**
+   * Fetches ARM metadata (top rules, stats, etc.)
+   */
+  getArmMetadata(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/arm/metadata`);
   }
+
+  /**
+   * Fetches ARM dashboard metrics (limited rules, fast)
+   */
+  getArmDashboard(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/arm/dashboard/`);
+  }
+
+  /**
+   * Fetches all association rules
+   */
+  getAssociationRules(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/arm/rules`);
+  }
+
+  // getDashboard removed: ARM backend does not provide this endpoint anymore
 
   getBehaviorPatterns(behavior: string): Observable<any> {
     return this.http.get(`${this.apiUrl}/patterns/${behavior}/`);

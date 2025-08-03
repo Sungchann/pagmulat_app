@@ -5,6 +5,10 @@ from . import views
 urlpatterns = [
     # ... existing endpoints ...
     path('dashboard/', views.arm_dashboard, name='arm-dashboard'),
+    path('arm/dashboard/', views.arm_dashboard, name='arm-dashboard-alt'), # Alternative URL for frontend compatibility
+    # ARM specific endpoints
+    path('arm/metadata/', views.arm_metadata, name='arm-metadata'),
+    path('arm/rules/', views.arm_rules, name='arm-rules'),
     path('patterns/<str:behavior>/', views.behavior_patterns, name='behavior-patterns'),
     path('predict/', views.predict, name='predict'),
     path('train/', views.train, name='train-model'),
