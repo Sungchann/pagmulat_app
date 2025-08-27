@@ -1,0 +1,147 @@
+support,itemsets
+0.8723404255319149,Regular_Breaks_Studying_Yes
+0.7978723404255319,Fixed_Study_Schedule_No
+0.7446808510638298,AcademicPlatform_ChatGPT or similiar
+0.7340425531914894,Over_Reliance_Yes
+0.6702127659574468,Social_Media_Daily_Visit_Always
+0.6063829787234043,ChatGPT_AI_Usage_Always
+0.5957446808510638,AcademicPlatform_GitHub
+0.5851063829787234,Study_Start_Time_Late Night (after 10pm)
+0.5851063829787234,Distraction_Blocking_No
+0.5638297872340425,MotivationTrigger_Personal goals
+0.5638297872340425,AcademicPlatform_VS Code/ IDEs
+0.4787234042553192,ProductivityTool_None
+0.46808510638297873,Program_CS
+0.4574468085106383,Productive_Yes
+0.6808510638297872,MotivationTrigger_Upcoming Deadlines
+0.648936170212766,MotivationTrigger_Exams
+0.6063829787234043,Motivation_Neutral
+0.5851063829787234,Age_21_23
+0.574468085106383,Year_3
+0.48936170212765956,MotivationTrigger_Instructor reminders
+0.48936170212765956,Distraction_Blocking_Yes
+0.4574468085106383,Distracting_Platform_TikTok
+0.4574468085106383,Study_Hours_Outside_Class_1-2 hours
+0.425531914893617,AcademicPlatform_Discord/ Slack
+0.5,Burnout_Exhaustion_Often
+0.5,Program_IT
+0.5212765957446809,Social_Distraction_Often
+0.40425531914893614,MotivationTrigger_Study group discussions
+0.40425531914893614,Productive_Sometimes
+0.6914893617021277,"Fixed_Study_Schedule_No, Regular_Breaks_Studying_Yes"
+0.6595744680851063,"AcademicPlatform_ChatGPT or similiar, Regular_Breaks_Studying_Yes"
+0.5957446808510638,"AcademicPlatform_ChatGPT or similiar, Fixed_Study_Schedule_No"
+0.5319148936170213,"AcademicPlatform_ChatGPT or similiar, Fixed_Study_Schedule_No, Regular_Breaks_Studying_Yes"
+0.6595744680851063,"Over_Reliance_Yes, Regular_Breaks_Studying_Yes"
+0.5851063829787234,"AcademicPlatform_ChatGPT or similiar, Over_Reliance_Yes"
+0.5638297872340425,"Fixed_Study_Schedule_No, Over_Reliance_Yes"
+0.5212765957446809,"AcademicPlatform_ChatGPT or similiar, Over_Reliance_Yes, Regular_Breaks_Studying_Yes"
+0.5106382978723404,"Fixed_Study_Schedule_No, Over_Reliance_Yes, Regular_Breaks_Studying_Yes"
+0.44680851063829785,"AcademicPlatform_ChatGPT or similiar, Fixed_Study_Schedule_No, Over_Reliance_Yes"
+0.40425531914893614,"AcademicPlatform_ChatGPT or similiar, Fixed_Study_Schedule_No, Over_Reliance_Yes, Regular_Breaks_Studying_Yes"
+0.574468085106383,"Regular_Breaks_Studying_Yes, Social_Media_Daily_Visit_Always"
+0.5531914893617021,"Fixed_Study_Schedule_No, Social_Media_Daily_Visit_Always"
+0.5,"AcademicPlatform_ChatGPT or similiar, Social_Media_Daily_Visit_Always"
+0.44680851063829785,"Over_Reliance_Yes, Social_Media_Daily_Visit_Always"
+0.43617021276595747,"MotivationTrigger_Upcoming Deadlines, Social_Media_Daily_Visit_Always"
+0.46808510638297873,"Fixed_Study_Schedule_No, Regular_Breaks_Studying_Yes, Social_Media_Daily_Visit_Always"
+0.43617021276595747,"AcademicPlatform_ChatGPT or similiar, Regular_Breaks_Studying_Yes, Social_Media_Daily_Visit_Always"
+0.4148936170212766,"AcademicPlatform_ChatGPT or similiar, Fixed_Study_Schedule_No, Social_Media_Daily_Visit_Always"
+0.40425531914893614,"Over_Reliance_Yes, Regular_Breaks_Studying_Yes, Social_Media_Daily_Visit_Always"
+0.40425531914893614,"MotivationTrigger_Upcoming Deadlines, Regular_Breaks_Studying_Yes, Social_Media_Daily_Visit_Always"
+0.5,"ChatGPT_AI_Usage_Always, Fixed_Study_Schedule_No"
+0.5,"ChatGPT_AI_Usage_Always, Regular_Breaks_Studying_Yes"
+0.48936170212765956,"AcademicPlatform_ChatGPT or similiar, ChatGPT_AI_Usage_Always"
+0.46808510638297873,"ChatGPT_AI_Usage_Always, Over_Reliance_Yes"
+0.4574468085106383,"ChatGPT_AI_Usage_Always, Social_Media_Daily_Visit_Always"
+0.43617021276595747,"ChatGPT_AI_Usage_Always, MotivationTrigger_Upcoming Deadlines"
+0.4148936170212766,"ChatGPT_AI_Usage_Always, Fixed_Study_Schedule_No, Regular_Breaks_Studying_Yes"
+0.40425531914893614,"AcademicPlatform_ChatGPT or similiar, ChatGPT_AI_Usage_Always, Regular_Breaks_Studying_Yes"
+0.40425531914893614,"AcademicPlatform_ChatGPT or similiar, ChatGPT_AI_Usage_Always, Fixed_Study_Schedule_No"
+0.40425531914893614,"ChatGPT_AI_Usage_Always, Over_Reliance_Yes, Regular_Breaks_Studying_Yes"
+0.40425531914893614,"ChatGPT_AI_Usage_Always, Fixed_Study_Schedule_No, Social_Media_Daily_Visit_Always"
+0.5319148936170213,"AcademicPlatform_GitHub, Regular_Breaks_Studying_Yes"
+0.46808510638297873,"AcademicPlatform_GitHub, Fixed_Study_Schedule_No"
+0.43617021276595747,"AcademicPlatform_ChatGPT or similiar, AcademicPlatform_GitHub"
+0.40425531914893614,"AcademicPlatform_GitHub, Social_Media_Daily_Visit_Always"
+0.40425531914893614,"AcademicPlatform_GitHub, Over_Reliance_Yes"
+0.40425531914893614,"AcademicPlatform_GitHub, MotivationTrigger_Upcoming Deadlines"
+0.425531914893617,"AcademicPlatform_GitHub, Fixed_Study_Schedule_No, Regular_Breaks_Studying_Yes"
+0.5,"Regular_Breaks_Studying_Yes, Study_Start_Time_Late Night (after 10pm)"
+0.46808510638297873,"Fixed_Study_Schedule_No, Study_Start_Time_Late Night (after 10pm)"
+0.4574468085106383,"AcademicPlatform_ChatGPT or similiar, Study_Start_Time_Late Night (after 10pm)"
+0.4148936170212766,"Social_Media_Daily_Visit_Always, Study_Start_Time_Late Night (after 10pm)"
+0.5,"Distraction_Blocking_No, Regular_Breaks_Studying_Yes"
+0.4787234042553192,"Distraction_Blocking_No, Fixed_Study_Schedule_No"
+0.44680851063829785,"Distraction_Blocking_No, Over_Reliance_Yes"
+0.4148936170212766,"ChatGPT_AI_Usage_Always, Distraction_Blocking_No"
+0.4148936170212766,"Distraction_Blocking_No, Social_Media_Daily_Visit_Always"
+0.40425531914893614,"AcademicPlatform_ChatGPT or similiar, Distraction_Blocking_No"
+0.425531914893617,"Distraction_Blocking_No, MotivationTrigger_Upcoming Deadlines"
+0.4148936170212766,"Distraction_Blocking_No, Fixed_Study_Schedule_No, Regular_Breaks_Studying_Yes"
+0.5319148936170213,"MotivationTrigger_Personal goals, Regular_Breaks_Studying_Yes"
+0.4574468085106383,"Fixed_Study_Schedule_No, MotivationTrigger_Personal goals"
+0.44680851063829785,"AcademicPlatform_ChatGPT or similiar, MotivationTrigger_Personal goals"
+0.40425531914893614,"MotivationTrigger_Personal goals, Over_Reliance_Yes"
+0.425531914893617,"Fixed_Study_Schedule_No, MotivationTrigger_Personal goals, Regular_Breaks_Studying_Yes"
+0.425531914893617,"AcademicPlatform_ChatGPT or similiar, MotivationTrigger_Personal goals, Regular_Breaks_Studying_Yes"
+0.5,"AcademicPlatform_VS Code/ IDEs, Regular_Breaks_Studying_Yes"
+0.46808510638297873,"AcademicPlatform_ChatGPT or similiar, AcademicPlatform_VS Code/ IDEs"
+0.46808510638297873,"AcademicPlatform_VS Code/ IDEs, Fixed_Study_Schedule_No"
+0.425531914893617,"AcademicPlatform_VS Code/ IDEs, Over_Reliance_Yes"
+0.40425531914893614,"AcademicPlatform_GitHub, AcademicPlatform_VS Code/ IDEs"
+0.4148936170212766,"AcademicPlatform_VS Code/ IDEs, MotivationTrigger_Upcoming Deadlines"
+0.43617021276595747,"AcademicPlatform_ChatGPT or similiar, AcademicPlatform_VS Code/ IDEs, Regular_Breaks_Studying_Yes"
+0.4148936170212766,"AcademicPlatform_VS Code/ IDEs, Fixed_Study_Schedule_No, Regular_Breaks_Studying_Yes"
+0.43617021276595747,"ProductivityTool_None, Regular_Breaks_Studying_Yes"
+0.40425531914893614,"Over_Reliance_Yes, ProductivityTool_None"
+0.40425531914893614,"Program_CS, Regular_Breaks_Studying_Yes"
+0.40425531914893614,"Productive_Yes, Regular_Breaks_Studying_Yes"
+0.6170212765957447,"MotivationTrigger_Upcoming Deadlines, Regular_Breaks_Studying_Yes"
+0.5638297872340425,"MotivationTrigger_Upcoming Deadlines, Over_Reliance_Yes"
+0.5531914893617021,"AcademicPlatform_ChatGPT or similiar, MotivationTrigger_Upcoming Deadlines"
+0.5319148936170213,"Fixed_Study_Schedule_No, MotivationTrigger_Upcoming Deadlines"
+0.5,"MotivationTrigger_Upcoming Deadlines, Over_Reliance_Yes, Regular_Breaks_Studying_Yes"
+0.5,"AcademicPlatform_ChatGPT or similiar, MotivationTrigger_Upcoming Deadlines, Regular_Breaks_Studying_Yes"
+0.46808510638297873,"AcademicPlatform_ChatGPT or similiar, MotivationTrigger_Upcoming Deadlines, Over_Reliance_Yes"
+0.4148936170212766,"AcademicPlatform_ChatGPT or similiar, MotivationTrigger_Upcoming Deadlines, Over_Reliance_Yes, Regular_Breaks_Studying_Yes"
+0.48936170212765956,"Fixed_Study_Schedule_No, MotivationTrigger_Upcoming Deadlines, Regular_Breaks_Studying_Yes"
+0.44680851063829785,"AcademicPlatform_ChatGPT or similiar, Fixed_Study_Schedule_No, MotivationTrigger_Upcoming Deadlines"
+0.425531914893617,"Fixed_Study_Schedule_No, MotivationTrigger_Upcoming Deadlines, Over_Reliance_Yes"
+0.4148936170212766,"AcademicPlatform_ChatGPT or similiar, Fixed_Study_Schedule_No, MotivationTrigger_Upcoming Deadlines, Regular_Breaks_Studying_Yes"
+0.5319148936170213,"MotivationTrigger_Exams, Regular_Breaks_Studying_Yes"
+0.5212765957446809,"Fixed_Study_Schedule_No, MotivationTrigger_Exams"
+0.5,"AcademicPlatform_ChatGPT or similiar, MotivationTrigger_Exams"
+0.48936170212765956,"MotivationTrigger_Exams, MotivationTrigger_Upcoming Deadlines"
+0.48936170212765956,"MotivationTrigger_Exams, Over_Reliance_Yes"
+0.4574468085106383,"MotivationTrigger_Exams, Social_Media_Daily_Visit_Always"
+0.425531914893617,"Fixed_Study_Schedule_No, MotivationTrigger_Exams, Regular_Breaks_Studying_Yes"
+0.425531914893617,"AcademicPlatform_ChatGPT or similiar, MotivationTrigger_Exams, Regular_Breaks_Studying_Yes"
+0.40425531914893614,"AcademicPlatform_ChatGPT or similiar, Fixed_Study_Schedule_No, MotivationTrigger_Exams"
+0.43617021276595747,"MotivationTrigger_Exams, MotivationTrigger_Upcoming Deadlines, Regular_Breaks_Studying_Yes"
+0.425531914893617,"AcademicPlatform_ChatGPT or similiar, MotivationTrigger_Exams, MotivationTrigger_Upcoming Deadlines"
+0.425531914893617,"MotivationTrigger_Exams, Over_Reliance_Yes, Regular_Breaks_Studying_Yes"
+0.40425531914893614,"MotivationTrigger_Exams, MotivationTrigger_Upcoming Deadlines, Over_Reliance_Yes"
+0.40425531914893614,"AcademicPlatform_ChatGPT or similiar, MotivationTrigger_Exams, Over_Reliance_Yes"
+0.5212765957446809,"Motivation_Neutral, Regular_Breaks_Studying_Yes"
+0.5,"Motivation_Neutral, Over_Reliance_Yes"
+0.46808510638297873,"Fixed_Study_Schedule_No, Motivation_Neutral"
+0.43617021276595747,"MotivationTrigger_Upcoming Deadlines, Motivation_Neutral"
+0.425531914893617,"AcademicPlatform_ChatGPT or similiar, Motivation_Neutral"
+0.44680851063829785,"Motivation_Neutral, Over_Reliance_Yes, Regular_Breaks_Studying_Yes"
+0.40425531914893614,"Fixed_Study_Schedule_No, Motivation_Neutral, Regular_Breaks_Studying_Yes"
+0.5,"Age_21_23, Regular_Breaks_Studying_Yes"
+0.4574468085106383,"AcademicPlatform_ChatGPT or similiar, Age_21_23"
+0.4574468085106383,"Age_21_23, Fixed_Study_Schedule_No"
+0.4148936170212766,"Age_21_23, Over_Reliance_Yes"
+0.5,"Fixed_Study_Schedule_No, Year_3"
+0.48936170212765956,"Regular_Breaks_Studying_Yes, Year_3"
+0.43617021276595747,"AcademicPlatform_ChatGPT or similiar, Year_3"
+0.4148936170212766,"Over_Reliance_Yes, Year_3"
+0.425531914893617,"Fixed_Study_Schedule_No, Regular_Breaks_Studying_Yes, Year_3"
+0.425531914893617,"MotivationTrigger_Instructor reminders, Regular_Breaks_Studying_Yes"
+0.44680851063829785,"Distraction_Blocking_Yes, Regular_Breaks_Studying_Yes"
+0.40425531914893614,"Burnout_Exhaustion_Often, Fixed_Study_Schedule_No"
+0.4148936170212766,"Burnout_Exhaustion_Often, Regular_Breaks_Studying_Yes"
+0.43617021276595747,"Program_IT, Regular_Breaks_Studying_Yes"
+0.4574468085106383,"Regular_Breaks_Studying_Yes, Social_Distraction_Often"

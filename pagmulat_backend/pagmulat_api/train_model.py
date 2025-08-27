@@ -3,7 +3,9 @@ import os
 import pandas as pd
 import json
 import numpy as np
+from config import config 
 from mlxtend.frequent_patterns import apriori, association_rules
+
 try:
     from .utils.formatting import format_itemset
 except ImportError:
@@ -14,10 +16,10 @@ except ImportError:
 
 # Configure paths
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA_DIR = os.path.join(BASE_DIR, 'data')
+DATA_DIR = os.path.join(BASE_DIR, 'data/rules')
 os.makedirs(DATA_DIR, exist_ok=True)
 
-def apriori_training_pipeline(data_path, min_support=0.1, min_confidence=0.65, min_lift=1.2):
+def apriori_training_pipeline(data_path, min_support=0.1, min_confidence=0.4, min_lift=1.2):
     """
     Pure Apriori-based Association Rule Mining pipeline
     Discovers interpretable rules and patterns for predictions/insights
@@ -56,7 +58,7 @@ def apriori_training_pipeline(data_path, min_support=0.1, min_confidence=0.65, m
     filtered_rules = filtered_rules.sort_values(['confidence', 'lift'], ascending=[False, False])
     
     # LIMIT RULES FOR FRONTEND PERFORMANCE
-    MAX_RULES_FOR_UI = 5000  # Keep top 5k rules for manageable UI display
+    MAX_RULES_FOR_UI = 5000 
     if len(filtered_rules) > MAX_RULES_FOR_UI:
         filtered_rules_limited = filtered_rules.head(MAX_RULES_FOR_UI)
         print(f"🎯 Limited to top {MAX_RULES_FOR_UI} rules for UI (sorted by confidence & lift)")
@@ -74,10 +76,17 @@ def apriori_training_pipeline(data_path, min_support=0.1, min_confidence=0.65, m
     
     print(f"📊 Rules for productivity prediction: {len(productivity_rules)} (from top {len(filtered_rules_limited)})")
     
-    # Show top prediction rules
+    # Show a sample of top and bottom prediction rules
     if len(productivity_rules) > 0:
         print("\n🎯 Top 5 Productivity Prediction Rules:")
         for i, (_, rule) in enumerate(productivity_rules.head(5).iterrows()):
+            antecedent = ', '.join(sorted(rule['antecedents']))
+            consequent = ', '.join(sorted(rule['consequents']))
+            print(f"  {i+1}. IF [{antecedent}] THEN [{consequent}] "
+                  f"(Confidence: {rule['confidence']:.1%}, Lift: {rule['lift']:.2f})")
+        
+        print("\n🎯 Bottom 5 Productivity Prediction Rules:")
+        for i, (_, rule) in enumerate(productivity_rules.tail(5).iterrows()):
             antecedent = ', '.join(sorted(rule['antecedents']))
             consequent = ', '.join(sorted(rule['consequents']))
             print(f"  {i+1}. IF [{antecedent}] THEN [{consequent}] "
@@ -98,12 +107,17 @@ def apriori_training_pipeline(data_path, min_support=0.1, min_confidence=0.65, m
         lambda x: ', '.join(sorted(x)) if x else ''
     )
     rules_export['consequents'] = rules_export['consequents'].apply(
-        lambda x: ', '.join(sorted(x)) if x else ''
+        lambda x: ', '. join(sorted(x)) if x else ''
     )
+
+    # NEW: Print a sample of the confidence column to the console for debugging
+    print("\n🔬 Debugging Confidence Values Before Saving:")
+    print("Top 5 confidence values:\n", rules_export['confidence'].head(5))
+    print("Bottom 5 confidence values:\n", rules_export['confidence'].tail(5))
     
     # Save ARM results (limited set for UI performance)
-    itemsets_path = os.path.join(DATA_DIR, 'frequent_itemsets.csv')
-    rules_path = os.path.join(DATA_DIR, 'association_rules_filtered.csv')
+    itemsets_path = os.path.join(DATA_DIR, 'apriori_frequent_itemsets.csv')
+    rules_path = os.path.join(DATA_DIR, 'apriori_association_rules.csv')
     frequent_itemsets_export.to_csv(itemsets_path, index=False)
     rules_export.to_csv(rules_path, index=False)
     
@@ -114,8 +128,8 @@ def apriori_training_pipeline(data_path, min_support=0.1, min_confidence=0.65, m
             'data_records': len(df),
             'features': list(df.columns),
             'frequent_itemsets': len(frequent_itemsets),
-            'total_rules': len(filtered_rules),  # Original total
-            'total_rules_ui': len(filtered_rules_limited),  # Limited for UI
+            'total_rules': len(filtered_rules), 
+            'total_rules_ui': len(filtered_rules_limited), 
             'productivity_rules': len(productivity_rules),
             'top_confidence': float(filtered_rules_limited['confidence'].max()) if len(filtered_rules_limited) > 0 else 0,
             'avg_confidence': float(filtered_rules_limited['confidence'].mean()) if len(filtered_rules_limited) > 0 else 0
@@ -124,7 +138,7 @@ def apriori_training_pipeline(data_path, min_support=0.1, min_confidence=0.65, m
             'min_support': min_support,
             'min_confidence': min_confidence,
             'min_lift': min_lift,
-            'num_rules': len(filtered_rules_limited),  # Use limited set
+            'num_rules': len(filtered_rules_limited), 
             'num_itemsets': len(frequent_itemsets),
             'top_rules': [
                 {
@@ -134,7 +148,7 @@ def apriori_training_pipeline(data_path, min_support=0.1, min_confidence=0.65, m
                     'lift': round(row['lift'], 2),
                     'support': round(row['support'], 3)
                 }
-                for _, row in filtered_rules_limited.head(5).iterrows()  # Use limited set
+                for _, row in filtered_rules_limited.head(5).iterrows()
             ]
         }
     }
@@ -144,29 +158,29 @@ def apriori_training_pipeline(data_path, min_support=0.1, min_confidence=0.65, m
     with open(metadata_path, 'w') as f:
         json.dump(metadata, f, indent=2)
     
-    print(f"\n💾 Artifacts saved:")
-    print(f"   • Frequent itemsets: {itemsets_path}")
-    print(f"   • Association rules: {rules_path}")
-    print(f"   • Metadata: {metadata_path}")
+    print(f"\nArtifacts saved:")
+    print(f"  • Frequent itemsets: {itemsets_path}")
+    print(f"  • Association rules: {rules_path}")
+    print(f"  • Metadata: {metadata_path}")
     
     return metadata
 
 if __name__ == "__main__":
     CONFIG = {
-        'data_path': os.path.join(BASE_DIR, "ModifiedFinalData1.xlsx"),
-        'min_support': 0.1,       # Reduced for more itemsets (10k-50k)
-        'min_confidence': 0.65,    # Matches your 65%+ requirement
-        'min_lift': 1.2            # Balanced lift threshold
+        'data_path': os.path.join(BASE_DIR, "transformed_student_data.xlsx"),
+        'min_support': config.MIN_SUPPORT, 
+        'min_confidence': config.MIN_CONFIDENCE, 
+        'min_lift': config.MIN_LIFT
     }
     
     try:
         results = apriori_training_pipeline(**CONFIG)
-        print(f"\n🚀 ARM Training Complete!")
-        print(f"   • Total Rules Generated: {results['arm']['num_rules']}")
-        print(f"   • Productivity Rules: {results['model']['productivity_rules']}")
-        print(f"   • Average Confidence: {results['model']['avg_confidence']:.1%}")
-        print(f"   • Top Confidence: {results['model']['top_confidence']:.1%}")
+        print(f"\nARM Training Complete!")
+        print(f"  • Total Rules Generated: {results['arm']['num_rules']}")
+        print(f"  • Productivity Rules: {results['model']['productivity_rules']}")
+        print(f"  • Average Confidence: {results['model']['avg_confidence']:.1%}")
+        print(f"  • Top Confidence: {results['model']['top_confidence']:.1%}")
     except Exception as e:
-        print(f"❌ Training failed: {str(e)}")
+        print(f"Training failed: {str(e)}")
         import traceback
         traceback.print_exc()

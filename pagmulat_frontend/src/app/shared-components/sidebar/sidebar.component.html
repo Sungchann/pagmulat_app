@@ -1,0 +1,34 @@
+<!-- sidebar.component.html -->
+<div class="h-screen w-60 bg-[#3b82f6] text-white fixed left-0 top-0">
+  <div class="p-4 text-2xl font-bold">Pagmulat</div>
+  <ul class="space-y-2 mt-6 px-4">
+    <li>
+      <a
+        routerLink="/dashboard"
+        routerLinkActive="bg-white text-[#3b82f6]"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="block px-3 py-2 rounded hover:bg-white hover:text-[#3b82f6] transition"
+      >
+        Dashboard
+      </a>
+    </li>
+    <li>
+      <a
+        routerLink="/pipeline"
+        routerLinkActive="bg-white text-[#3b82f6]"
+        class="block px-3 py-2 rounded hover:bg-white hover:text-[#3b82f6] transition"
+      >
+        Pipeline
+      </a>
+    </li>
+    <li>
+      <a
+        routerLink="/comparison"
+        routerLinkActive="bg-white text-[#3b82f6]"
+        class="block px-3 py-2 rounded hover:bg-white hover:text-[#3b82f6] transition"
+      >
+        Comparison
+      </a>
+    </li>
+  </ul>
+</div>

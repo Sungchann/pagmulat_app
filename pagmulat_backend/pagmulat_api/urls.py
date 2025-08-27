@@ -1,6 +1,9 @@
 # pagmulat_api/urls.py
 from django.urls import path
 from . import views
+from .views_api.pipeline_data_views import get_raw_data, get_cleaned_data, get_augmented_data
+from .views_api.rules_comparison_views import get_algorithm_rules
+from .assessment_api.assessment_pipeline import assessment_predict
 
 urlpatterns = [
     # ... existing endpoints ...
@@ -17,4 +20,13 @@ urlpatterns = [
     path('arm-rules/', views.get_all_rules, name='all-rules'),
     path('frequent-itemsets/', views.get_all_itemsets, name='all-itemsets'),
     path('prediction-history/', views.prediction_history, name='prediction-history'),
+    path('assessment-predict/', assessment_predict, name='assessment_predict'),
+    
+    # Data Obtention APIs
+    path('raw-data/', get_raw_data, name='raw-data'),
+    path('cleaned-data/', get_cleaned_data, name='cleaned-data'),
+    path('augmented-data/', get_augmented_data, name='augmented-data'),
+    
+    # Rules Obtention API
+    path('apriori-fpgrowth-rules/', get_algorithm_rules, name="algorithm-rules")
 ]

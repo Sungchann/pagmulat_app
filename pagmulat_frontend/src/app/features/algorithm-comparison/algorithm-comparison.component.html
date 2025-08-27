@@ -1,0 +1,110 @@
+<div class="ml-2 p-8 bg-white min-h-screen">
+    <h1 class="text-4xl font-bold text-primary-blue mb-0">PAGMULáT Comparison</h1>
+    <p class="text-lg text-gray-600 mt-2 mb-8">Mining associative patterns in student digital behavior. Awakening change
+        and improvement.</p>
+
+    <h2 class="text-xl font-bold text-primary-blue mb-3 text-center">Parameters</h2>
+    <div class="flex justify-center items-stretch gap-3 mb-5">
+        <div
+            class="w-32 h-28 bg-blue-600 text-white rounded-lg shadow-lg p-3 text-center flex flex-col items-center justify-center cursor-pointer transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-500 hover:text-white hover:scale-105">
+            <span class="text-xl font-bold">{{ minSupport || "-"}}</span>
+            <span class="text-xs font-medium">Min. Support</span>
+        </div>
+        <div
+            class="w-32 h-28 bg-blue-600 text-white rounded-lg shadow-lg p-3 text-center flex flex-col items-center justify-center cursor-pointer transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-500 hover:text-white hover:scale-105">
+            <span class="text-xl font-bold">{{ minConfidence || "-"}}</span>
+            <span class="text-xs font-medium">Min. Confidence</span>
+        </div>
+        <div
+            class="w-32 h-28 bg-blue-600 text-white rounded-lg shadow-lg p-3 text-center flex flex-col items-center justify-center cursor-pointer transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-500 hover:text-white hover:scale-105">
+            <span class="text-xl font-bold">{{ minLift || "-"}}</span>
+            <span class="text-xs font-medium">Min. Lift</span>
+        </div>
+    </div>
+
+    <section class="grid md:grid-cols-2 gap-8 mb-12">
+        <!-- Apriori Table -->
+        <div class="bg-white p-6 rounded-xl shadow-md w-full">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="p-3 bg-indigo-100 rounded-full text-indigo-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-scale">
+                        <path d="M22 15a7 7 0 1 1-2.5-6.5C21.5 5.5 19 2 15 2s-6.5 3.5-6.5 6.5A7 7 0 1 1 2 15h20z" />
+                        <path d="M11 9H9v6h2" />
+                        <path d="M15 9h-2v6h2" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Apriori Algorithm</h3>
+                    <p class="text-sm text-gray-600">A classic algorithm for mining frequent itemsets and association
+                        rules.</p>
+                </div>
+            </div>
+            <div class="overflow-auto max-h-[300px] rounded-lg border border-gray-200">
+                <table class="min-w-full table-auto text-gray-800">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="p-4 text-left font-semibold">Antecedent</th>
+                            <th class="p-4 text-left font-semibold">Consequent</th>
+                            <th class="p-4 text-left font-semibold">Support</th>
+                            <th class="p-4 text-left font-semibold">Confidence</th>
+                            <th class="p-4 text-left font-semibold">Lift</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let rule of aprioriRules" class="border-t border-gray-200">
+                            <td class="p-4">{{ rule.antecedent || "-" }}</td>
+                            <td class="p-4">{{ rule.consequent || "-" }}</td>
+                            <td class="p-4">{{ rule.support.toFixed(2) || "-" }}</td>
+                            <td class="p-4">{{ rule.confidence.toFixed(2) || "-" }}</td>
+                            <td class="p-4">{{ rule.lift.toFixed(2) || "-" }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- FP-Growth Table -->
+        <div class="bg-white p-6 rounded-xl shadow-md w-full">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="p-3 bg-indigo-100 rounded-full text-indigo-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-scale">
+                        <path d="M22 15a7 7 0 1 1-2.5-6.5C21.5 5.5 19 2 15 2s-6.5 3.5-6.5 6.5A7 7 0 1 1 2 15h20z" />
+                        <path d="M11 9H9v6h2" />
+                        <path d="M15 9h-2v6h2" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">FP-Growth Algorithm</h3>
+                    <p class="text-sm text-gray-600">An efficient and faster alternative to Apriori that uses a compact
+                        data structure.</p>
+                </div>
+            </div>
+            <div class="overflow-auto max-h-[300px] rounded-lg border border-gray-200">
+                <table class="min-w-full table-auto text-gray-800">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="p-4 text-left font-semibold">Antecedent</th>
+                            <th class="p-4 text-left font-semibold">Consequent</th>
+                            <th class="p-4 text-left font-semibold">Support</th>
+                            <th class="p-4 text-left font-semibold">Confidence</th>
+                            <th class="p-4 text-left font-semibold">Lift</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let rule of fpGrowthRules" class="border-t border-gray-200">
+                            <td class="p-4">{{ rule.antecedent || "-" }}</td>
+                            <td class="p-4">{{ rule.consequent || "-" }}</td>
+                            <td class="p-4">{{ rule.support.toFixed(2) || "-" }}</td>
+                            <td class="p-4">{{ rule.confidence.toFixed(2) || "-" }}</td>
+                            <td class="p-4">{{ rule.lift.toFixed(2) || "-" }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>

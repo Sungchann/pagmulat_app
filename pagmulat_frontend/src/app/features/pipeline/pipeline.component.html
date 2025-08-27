@@ -1,0 +1,154 @@
+<div class="ml-2 p-8 bg-white min-h-screen">
+  <h1 class="text-4xl font-bold text-primary-blue mb-0">PAGMULáT Pipeline</h1>
+    <p class="text-lg text-gray-600 mt-2 mb-8">Mining associative patterns in student digital behavior. Awakening change and improvement.</p>
+
+  <section class="mb-12 space-y-12">
+
+    <!-- Step 1: Data Collection -->
+    <div class="bg-white p-6 rounded-xl shadow-md w-full">
+      <div class="flex items-center space-x-4 mb-4">
+        <div class="p-3 bg-blue-100 rounded-full text-blue-500">
+          <!-- Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <path
+              d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.414A2 2 0 0 0 18.414 6L14 1.586A2 2 0 0 0 13.586 2H15a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V7.414a2 2 0 0 0-.586-1.414L15.586 2.586A2 2 0 0 0 15 2Z" />
+            <path d="M4 14h12" />
+            <path d="M4 18h12" />
+            <path d="M12 2v4a2 2 0 0 0 2 2h4" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium text-gray-800">1. Data Collection</h3>
+          <p class="text-sm text-gray-600">Gathering responses School of Computer Studies students from the University of San Jose–Recoletos via Google Form.</p>
+        </div>
+      </div>
+
+      <p class="mb-2 text-l"><strong class="text-primary-blue">Number of Students: </strong> <strong
+          class="text-primary-blue">{{ rawData?.rows?.length || 0 }}</strong></p>
+      <div class="overflow-auto max-h-[300px] rounded-lg border border-gray-200">
+        <table class="min-w-max text-sm text-left text-gray-800 table-auto" *ngIf="rawData">
+          <thead class="bg-gray-50">
+            <tr>
+              <th *ngFor="let header of rawData.headers"
+                class="p-3 whitespace-nowrap font-semibold border-b sticky top-0 bg-gray-50 z-10">
+                {{ header }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let row of rawData.rows" class="border-t border-gray-200">
+              <td *ngFor="let header of rawData.headers" class="p-3 whitespace-nowrap">
+                {{ row[header] || '' }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Step 2: Preprocessing & Transformation -->
+    <div class="bg-white p-6 rounded-xl shadow-md w-full">
+      <div class="flex items-center space-x-4 mb-4">
+        <div class="p-3 bg-blue-100 rounded-full text-blue-500">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <rect x="16" y="16" width="6" height="6" rx="1" />
+            <rect x="2" y="16" width="6" height="6" rx="1" />
+            <rect x="9" y="2" width="6" height="6" rx="1" />
+            <path d="M12 8v4a2 2 0 0 0 2 2h2" />
+            <path d="M12 14h2a2 2 0 0 1 2 2v2" />
+            <path d="M8 12v4a2 2 0 0 0 2 2h2" />
+            <path d="M14 10v2a2 2 0 0 1-2 2h-2" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium text-gray-800">2. Preprocessing & Transformation</h3>
+          <p class="text-sm text-gray-600">Data preprocessing and transformation, specifically converting Likert scale responses into separate binary values (e.g., year level into YEAR_1, YEAR_2, etc.).</p>
+        </div>
+      </div>
+
+      <p class="mb-2 text-l"><strong class="text-primary-blue">Number of Students: </strong> <strong
+          class="text-primary-blue">{{ cleanedData?.rows?.length || 0 }}</strong></p>
+      <div class="overflow-auto max-h-[300px] rounded-lg border border-gray-200">
+        <table class="min-w-max text-sm text-left text-gray-800 table-auto" *ngIf="cleanedData">
+          <thead class="bg-gray-50">
+            <tr>
+              <th *ngFor="let header of cleanedData.headers"
+                class="p-3 whitespace-nowrap font-semibold border-b sticky top-0 bg-gray-50 z-10">
+                {{ header }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let row of cleanedData.rows" class="border-t border-gray-200">
+              <td *ngFor="let header of cleanedData.headers" class="p-3 whitespace-nowrap">
+                {{ row[header] || 0 }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Step 3: Augmentation -->
+    <div class="bg-white p-6 rounded-xl shadow-md w-full">
+      <div class="flex items-center space-x-4 mb-4">
+        <div class="p-3 bg-blue-100 rounded-full text-blue-500">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="12" y1="18" x2="12" y2="12" />
+            <line x1="9" y1="15" x2="15" y2="15" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium text-gray-800">3. Data Augmentation</h3>
+          <p class="text-sm text-gray-600">AData augmentation is performed to increase the representation of underrepresented demographics.</p>
+        </div>
+      </div>
+
+      <p class="mb-2 text-l"><strong class="text-primary-blue">Number of Students: </strong> <strong
+          class="text-primary-blue">{{ augmentedData?.rows?.length || 0 }}</strong></p>
+      <div class="overflow-auto max-h-[300px] rounded-lg border border-gray-200">
+        <table class="min-w-max text-sm text-left text-gray-800 table-auto" *ngIf="augmentedData">
+          <thead class="bg-gray-50">
+            <tr>
+              <th *ngFor="let header of augmentedData.headers"
+                class="p-3 whitespace-nowrap font-semibold border-b sticky top-0 bg-gray-50 z-10">
+                {{ header }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let row of augmentedData.rows" class="border-t border-gray-200">
+              <td *ngFor="let header of augmentedData.headers" class="p-3 whitespace-nowrap">
+                {{ row[header] || 0 }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Step 4: Apriori Algorithm -->
+    <div class="bg-white p-6 rounded-xl shadow-md w-full">
+      <div class="flex items-center space-x-4 mb-4">
+        <div class="p-3 bg-blue-100 rounded-full text-blue-500">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.3-4.3" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium text-gray-800">4. Apriori Algorithm</h3>
+          <p class="text-sm text-gray-600">Running Apriori on the prepared data to generate frequent itemsets and
+            association rules.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</div>

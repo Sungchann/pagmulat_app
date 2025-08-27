@@ -1,7 +1,7 @@
 {
   "model": {
     "algorithm": "Apriori Association Rule Mining",
-    "data_records": 94,
+    "data_records": 40,
     "features": [
       "Year_1",
       "Year_2",
@@ -108,61 +108,56 @@
       "AcademicPlatform_Zoom/ Google Meet",
       "Over_Reliance_No",
       "Over_Reliance_Not sure",
-      "Over_Reliance_Yes",
-      "uses_music",
-      "uses_pomodoro",
-      "reduce_social_media",
-      "reduce_ai_dependence",
-      "uses_official_docs",
-      "time_awareness"
+      "Over_Reliance_Yes"
     ],
-    "frequent_itemsets": 74244,
-    "total_rules": 224919,
-    "productivity_rules": 3706,
+    "frequent_itemsets": 821,
+    "total_rules": 1980,
+    "total_rules_ui": 1980,
+    "productivity_rules": 45,
     "top_confidence": 1.0,
-    "avg_confidence": 0.7861800562869563
+    "avg_confidence": 0.8078749235918891
   },
   "arm": {
-    "min_support": 0.1,
-    "min_confidence": 0.65,
+    "min_support": 0.4,
+    "min_confidence": 0.6,
     "min_lift": 1.2,
-    "num_rules": 224919,
-    "num_itemsets": 74244,
+    "num_rules": 1980,
+    "num_itemsets": 821,
     "top_rules": [
       {
-        "antecedent": "AcademicPlatform ChatGPT or similiar, Age 21 23, MotivationTrigger Exams, Highly Productive, Regular Breaks Studying Yes",
-        "consequent": "MotivationTrigger Upcoming Deadlines",
+        "antecedent": "MotivationTrigger Exams, Program CS",
+        "consequent": "AcademicPlatform ChatGPT or similiar, AcademicPlatform VS Code/ IDEs, MotivationTrigger Upcoming Deadlines, Regular Breaks Studying Yes",
         "confidence": 1.0,
-        "lift": 1.47,
-        "support": 0.117
+        "lift": 1.67,
+        "support": 0.4
       },
       {
-        "antecedent": "Uses ChatGPT Regularly, Distracting Platform TikTok, Distraction Blocking No, MotivationTrigger Upcoming Deadlines, Late Night Studying",
-        "consequent": "MotivationTrigger Exams",
+        "antecedent": "MotivationTrigger Exams, Program CS",
+        "consequent": "AcademicPlatform VS Code/ IDEs, MotivationTrigger Upcoming Deadlines, Regular Breaks Studying Yes",
+        "confidence": 1.0,
+        "lift": 1.6,
+        "support": 0.4
+      },
+      {
+        "antecedent": "AcademicPlatform ChatGPT or similiar, MotivationTrigger Exams, Program CS",
+        "consequent": "AcademicPlatform VS Code/ IDEs, MotivationTrigger Upcoming Deadlines, Regular Breaks Studying Yes",
+        "confidence": 1.0,
+        "lift": 1.6,
+        "support": 0.4
+      },
+      {
+        "antecedent": "MotivationTrigger Exams, Program CS",
+        "consequent": "AcademicPlatform ChatGPT or similiar, AcademicPlatform VS Code/ IDEs, MotivationTrigger Upcoming Deadlines",
         "confidence": 1.0,
         "lift": 1.54,
-        "support": 0.117
+        "support": 0.4
       },
       {
-        "antecedent": "AcademicPlatform Discord/ Slack, AcademicPlatform GitHub, AcademicPlatform VS Code/ IDEs, Age 21 23, Late Night Studying",
-        "consequent": "Fixed Study Schedule No",
+        "antecedent": "AcademicPlatform GitHub, MotivationTrigger Exams",
+        "consequent": "AcademicPlatform ChatGPT or similiar, AcademicPlatform VS Code/ IDEs, MotivationTrigger Upcoming Deadlines",
         "confidence": 1.0,
-        "lift": 1.25,
-        "support": 0.128
-      },
-      {
-        "antecedent": "AcademicPlatform VS Code/ IDEs, Age 21 23, Fixed Study Schedule No, MotivationTrigger Personal goals, Social Media Daily Visit Always",
-        "consequent": "AcademicPlatform ChatGPT or similiar",
-        "confidence": 1.0,
-        "lift": 1.34,
-        "support": 0.106
-      },
-      {
-        "antecedent": "AcademicPlatform ChatGPT or similiar, Uses ChatGPT Regularly, Fixed Study Schedule No, MotivationTrigger Upcoming Deadlines, Submit Assignments On Time Often",
-        "consequent": "Over Reliance Yes",
-        "confidence": 1.0,
-        "lift": 1.36,
-        "support": 0.106
+        "lift": 1.54,
+        "support": 0.475
       }
     ]
   }

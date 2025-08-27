@@ -1,5 +1,285 @@
 [
   {
+    "timestamp": "2025-08-04 11:58:25",
+    "input": {
+      "year_level": "Year_2",
+      "program": "Program_CS",
+      "age": 21,
+      "gender": "Male",
+      "lms_usage": "LMS_Usage_Rarely",
+      "code_platform_usage": "Code_Compiler_Usage_Rarely",
+      "ai_usage": "ChatGPT_AI_Usage_Rarely",
+      "social_media_usage": "Social_Media_Daily_Visit_Rarely",
+      "fixed_study_schedule": "Fixed_Study_Schedule_Yes",
+      "study_hours": "Study_Hours_Outside_Class_1-2 hours",
+      "study_start_time": "Study_Start_Time_Morning",
+      "assignment_timeliness": "Submit_Assignments_On_Time_Rarely",
+      "collab_tools_usage": "Online_Collaboration_Tools_Rarely",
+      "sleep_time": "Sleep_Time_Weekdays_12 AM - 2 AM",
+      "burnout": "Burnout_Exhaustion_Rarely",
+      "study_breaks": "Regular_Breaks_Studying_Yes",
+      "motivation": "Motivation_Not motivated",
+      "motivation_triggers": [
+        "MotivationTrigger_Exams"
+      ],
+      "productivity": "Productive_Yes",
+      "productivity_tools": [
+        "ProductivityTool_Google Calender"
+      ],
+      "social_media_distraction": "Social_Distraction_Rarely",
+      "distraction_platform": "Distracting_Platform_Facebook",
+      "block_distractions": "Distraction_Blocking_Yes",
+      "academic_tools": [
+        "AcademicPlatform_Google Classroom"
+      ],
+      "digital_reliance": "Over_Reliance_Yes",
+      "digital_habits": "",
+      "digital_change": "",
+      "digital_reflection": ""
+    },
+    "prediction": "Uncertain",
+    "confidence": 40.0,
+    "method": "Association Rule Mining",
+    "matching_rules": 2,
+    "reasoning": [
+      "Insufficient patterns for strong prediction"
+    ]
+  },
+  {
+    "timestamp": "2025-08-04 11:38:22",
+    "input": {
+      "year_level": "Year_2",
+      "program": "Program_CS",
+      "age": 22,
+      "gender": "Male",
+      "lms_usage": "LMS_Usage_Rarely",
+      "code_platform_usage": "Code_Compiler_Usage_Never",
+      "ai_usage": "ChatGPT_AI_Usage_Rarely",
+      "social_media_usage": "Social_Media_Daily_Visit_Sometimes",
+      "fixed_study_schedule": "Fixed_Study_Schedule_Yes",
+      "study_hours": "Study_Hours_Outside_Class_1-2 hours",
+      "study_start_time": "Study_Start_Time_Evening",
+      "assignment_timeliness": "Submit_Assignments_On_Time_Rarely",
+      "collab_tools_usage": "Online_Collaboration_Tools_Rarely",
+      "sleep_time": "Sleep_Time_Weekdays_12 AM - 2 AM",
+      "burnout": "Burnout_Exhaustion_Rarely",
+      "study_breaks": "Regular_Breaks_Studying_Yes",
+      "motivation": "Motivation_Slightly motivated",
+      "motivation_triggers": [
+        "MotivationTrigger_Upcoming Deadlines"
+      ],
+      "productivity": "Productive_Yes",
+      "productivity_tools": [
+        "ProductivityTool_Google Calender"
+      ],
+      "social_media_distraction": "Social_Distraction_Often",
+      "distraction_platform": "Distracting_Platform_TikTok",
+      "block_distractions": "Distraction_Blocking_Yes",
+      "academic_tools": [
+        "AcademicPlatform_Google Classroom"
+      ],
+      "digital_reliance": "Over_Reliance_Yes",
+      "digital_habits": "",
+      "digital_change": "",
+      "digital_reflection": ""
+    },
+    "prediction": "Uncertain",
+    "confidence": 40.0,
+    "method": "Association Rule Mining",
+    "matching_rules": 2,
+    "reasoning": [
+      "Insufficient patterns for strong prediction"
+    ]
+  },
+  {
+    "timestamp": "2025-08-04 11:18:02",
+    "input": {
+      "year_level": "Year_3",
+      "program": "BS Information Technology",
+      "age": 22,
+      "gender": "Male",
+      "lms_usage": "Sometimes",
+      "code_platform_usage": "Rarely",
+      "ai_usage": "Rarely",
+      "social_media_usage": "Often",
+      "fixed_study_schedule": "Yes",
+      "study_hours": "1-2",
+      "study_start_time": "Morning",
+      "assignment_timeliness": "Sometimes",
+      "collab_tools_usage": "Rarely",
+      "sleep_time": "Before 10 PM",
+      "burnout": "Sometimes",
+      "study_breaks": "Yes",
+      "motivation": "Neutral",
+      "motivation_triggers": [
+        "Study group discussions"
+      ],
+      "productivity": "Yes",
+      "productivity_tools": [
+        "Pomodoro Timer"
+      ],
+      "social_media_distraction": "Rarely",
+      "distraction_platform": "Twitter/X",
+      "block_distractions": "Yes",
+      "academic_tools": [
+        "Google Classroom",
+        "Replit/ Online compilers"
+      ],
+      "digital_reliance": "Yes",
+      "digital_habits": "",
+      "digital_change": "",
+      "digital_reflection": ""
+    },
+    "prediction": "Moderate Productivity",
+    "confidence": 60.0,
+    "method": "Association Rule Mining",
+    "matching_rules": 365,
+    "reasoning": [
+      "Inferred from 2 positive behavior patterns"
+    ]
+  },
+  {
+    "timestamp": "2025-08-04 06:47:28",
+    "input": {
+      "year_level": "Year_3",
+      "program": "BS Information Systems",
+      "age": 22,
+      "gender": "Female",
+      "lms_usage": "Always",
+      "code_platform_usage": "Sometimes",
+      "ai_usage": "Rarely",
+      "social_media_usage": "Rarely",
+      "fixed_study_schedule": "Yes",
+      "study_hours": "1-2",
+      "study_start_time": "Afternoon",
+      "assignment_timeliness": "Sometimes",
+      "collab_tools_usage": "Rarely",
+      "sleep_time": "12 AM - 2 AM",
+      "burnout": "Sometimes",
+      "study_breaks": "Yes",
+      "motivation": "Neutral",
+      "motivation_triggers": [
+        "Personal goals"
+      ],
+      "productivity": "Yes",
+      "productivity_tools": [
+        "Forest App"
+      ],
+      "social_media_distraction": "Rarely",
+      "distraction_platform": "Instagram",
+      "block_distractions": "Yes",
+      "academic_tools": [
+        "GitHub",
+        "ChatGPT or similiar"
+      ],
+      "digital_reliance": "Yes",
+      "digital_habits": "",
+      "digital_change": "",
+      "digital_reflection": ""
+    },
+    "prediction": "Moderate Productivity",
+    "confidence": 60.0,
+    "method": "Association Rule Mining",
+    "matching_rules": 207,
+    "reasoning": [
+      "Inferred from 3 positive behavior patterns"
+    ]
+  },
+  {
+    "timestamp": "2025-08-04 05:50:22",
+    "input": {
+      "year_level": "Year_1",
+      "program": "BS Computer Science",
+      "age": 22,
+      "gender": "Male",
+      "lms_usage": "Never",
+      "code_platform_usage": "Never",
+      "ai_usage": "Sometimes",
+      "social_media_usage": "Often",
+      "fixed_study_schedule": "Yes",
+      "study_hours": "<1",
+      "study_start_time": "Morning",
+      "assignment_timeliness": "Never",
+      "collab_tools_usage": "Sometimes",
+      "sleep_time": "10 PM - 12AM",
+      "burnout": "Sometimes",
+      "study_breaks": "Yes",
+      "motivation": "Neutral",
+      "motivation_triggers": [
+        "Upcoming Deadlines",
+        "Exams"
+      ],
+      "productivity": "Yes",
+      "productivity_tools": [
+        "Google Calender"
+      ],
+      "social_media_distraction": "Often",
+      "distraction_platform": "TikTok",
+      "block_distractions": "Yes",
+      "academic_tools": [
+        "ChatGPT or similiar"
+      ],
+      "digital_reliance": "Yes",
+      "digital_habits": "",
+      "digital_change": "",
+      "digital_reflection": ""
+    },
+    "prediction": "Highly Productive",
+    "confidence": 73.3,
+    "method": "Association Rule Mining",
+    "matching_rules": 197,
+    "reasoning": [
+      "Based on rule: IF [Program_CS, Regular_Breaks_Studying_Yes, Sleep_Time_Weekdays_10 PM - 12AM] THEN [Productive_Yes] (Confidence: 73.3%)"
+    ]
+  },
+  {
+    "timestamp": "2025-08-04 05:49:50",
+    "input": {
+      "year_level": "Year_1",
+      "program": "BS Computer Science",
+      "age": 22,
+      "gender": "Male",
+      "lms_usage": "Often",
+      "code_platform_usage": "Rarely",
+      "ai_usage": "Sometimes",
+      "social_media_usage": "Often",
+      "fixed_study_schedule": "Yes",
+      "study_hours": "<1",
+      "study_start_time": "Morning",
+      "assignment_timeliness": "Often",
+      "collab_tools_usage": "Sometimes",
+      "sleep_time": "10 PM - 12AM",
+      "burnout": "Sometimes",
+      "study_breaks": "Yes",
+      "motivation": "Neutral",
+      "motivation_triggers": [
+        "Upcoming Deadlines",
+        "Exams"
+      ],
+      "productivity": "Yes",
+      "productivity_tools": [
+        "Google Calender"
+      ],
+      "social_media_distraction": "Often",
+      "distraction_platform": "TikTok",
+      "block_distractions": "Yes",
+      "academic_tools": [
+        "ChatGPT or similiar"
+      ],
+      "digital_reliance": "Yes",
+      "digital_habits": "",
+      "digital_change": "",
+      "digital_reflection": ""
+    },
+    "prediction": "Highly Productive",
+    "confidence": 73.3,
+    "method": "Association Rule Mining",
+    "matching_rules": 334,
+    "reasoning": [
+      "Based on rule: IF [Program_CS, Regular_Breaks_Studying_Yes, Sleep_Time_Weekdays_10 PM - 12AM] THEN [Productive_Yes] (Confidence: 73.3%)"
+    ]
+  },
+  {
     "timestamp": "2025-08-03 22:56:22",
     "input": {
       "year_level": "Year_3",

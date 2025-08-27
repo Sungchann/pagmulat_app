@@ -1,0 +1,335 @@
+<form [formGroup]="surveyForm" (ngSubmit)="submitSurvey()" class="space-y-6 relative">
+  <h2 class="text-2xl font-bold text-primary-blue mb-4">Student Digital Behavior Survey</h2>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">Year Level</label>
+    <select formControlName="year_level" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <option value="">Select</option>
+      <option value="Year_1">1st Year</option>
+      <option value="Year_2">2nd Year</option>
+      <option value="Year_3">3rd Year</option>
+      <option value="Year_4">4th Year</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">Program</label>
+    <select formControlName="program" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <option value="">Select</option>
+      <option value="Program_CS">BS Computer Science</option>
+      <option value="Program_IT">BS Information Technology</option>
+      <option value="Program_EMC">BS Entertainment & Multimedia Computing</option>
+      <option value="Program_IS">BS Information Systems</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">Age</label>
+    <input type="number" formControlName="age" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400" min="15" max="99" />
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">Gender</label>
+    <select formControlName="gender" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <option value="">Select</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Prefer not to say">Prefer not to say</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">How often do you use the Learning Management System (e.g., Canvas, MS Teams, Google Classroom)?</label>
+    <select formControlName="lms_usage" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <option value="">Select</option>
+      <option value="LMS_Usage_Never">Never</option>
+      <option value="LMS_Usage_Rarely">Rarely</option>
+      <option value="LMS_Usage_Sometimes">Sometimes</option>
+      <option value="LMS_Usage_Often">Often</option>
+      <option value="LMS_Usage_Always">Always</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">How often do you use online code compiling platforms (e.g., GitHub, Replit)?</label>
+    <select formControlName="code_platform_usage" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <option value="">Select</option>
+      <option value="Code_Compiler_Usage_Never">Never</option>
+      <option value="Code_Compiler_Usage_Rarely">Rarely</option>
+      <option value="Code_Compiler_Usage_Sometimes">Sometimes</option>
+      <option value="Code_Compiler_Usage_Often">Often</option>
+      <option value="Code_Compiler_Usage_Always">Always</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">How often do you use ChatGPT or other AI tools for studying?</label>
+    <select formControlName="ai_usage" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <option value="">Select</option>
+      <option value="ChatGPT_AI_Usage_Never">Never</option>
+      <option value="ChatGPT_AI_Usage_Rarely">Rarely</option>
+      <option value="ChatGPT_AI_Usage_Sometimes">Sometimes</option>
+      <option value="ChatGPT_AI_Usage_Often">Often</option>
+      <option value="ChatGPT_AI_Usage_Always">Always</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">How often do you visit social media on a daily basis?</label>
+    <select formControlName="social_media_usage" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <option value="">Select</option>
+      <option value="Social_Media_Daily_Visit_Never">Never</option>
+      <option value="Social_Media_Daily_Visit_Rarely">Rarely</option>
+      <option value="Social_Media_Daily_Visit_Sometimes">Sometimes</option>
+      <option value="Social_Media_Daily_Visit_Often">Often</option>
+      <option value="Social_Media_Daily_Visit_Always">Always</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">Do you follow a fixed daily study schedule?</label>
+    <select formControlName="fixed_study_schedule" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <option value="">Select</option>
+      <option value="Fixed_Study_Schedule_Yes">Yes</option>
+      <option value="Fixed_Study_Schedule_No">No</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">How many hours do you study per day?</label>
+    <select formControlName="study_hours" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <option value="">Select</option>
+      <option value="Study_Hours_Outside_Class_Less than 1 hour">Less than 1 hour</option>
+      <option value="Study_Hours_Outside_Class_1-2 hours">1-2 hours</option>
+      <option value="Study_Hours_Outside_Class_3-4 hours">3-4 hours</option>
+      <option value="Study_Hours_Outside_Class_More than 5 hours">More than 5 hours</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">What time do you usually start studying?</label>
+    <select formControlName="study_start_time" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <option value="">Select</option>
+      <option value="Study_Start_Time_Morning">Morning</option>
+      <option value="Study_Start_Time_Afternoon">Afternoon</option>
+      <option value="Study_Start_Time_Evening">Evening</option>
+      <option value="Study_Start_Time_Late Night (after 10pm)">Late Night (after 10pm)</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">How often do you submit assignments on time?</label>
+    <select formControlName="assignment_timeliness" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <option value="">Select</option>
+      <option value="Submit_Assignments_On_Time_Never">Never</option>
+      <option value="Submit_Assignments_On_Time_Rarely">Rarely</option>
+      <option value="Submit_Assignments_On_Time_Sometimes">Sometimes</option>
+      <option value="Submit_Assignments_On_Time_Often">Often</option>
+      <option value="Submit_Assignments_On_Time_Always">Always</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">When working on group projects, how often do you use online collaboration tools?</label>
+    <select formControlName="collab_tools_usage" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <option value="">Select</option>
+      <option value="Online_Collaboration_Tools_Never">Never</option>
+      <option value="Online_Collaboration_Tools_Rarely">Rarely</option>
+      <option value="Online_Collaboration_Tools_Sometimes">Sometimes</option>
+      <option value="Online_Collaboration_Tools_Often">Often</option>
+      <option value="Online_Collaboration_Tools_Always">Always</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">What time do you usually sleep on weekdays?</label>
+    <select formControlName="sleep_time" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <option value="">Select</option>
+      <option value="Sleep_Time_Weekdays_Before 10 PM">Before 10 PM</option>
+      <option value="Sleep_Time_Weekdays_10 PM - 12AM">10 PM - 12AM</option>
+      <option value="Sleep_Time_Weekdays_12 AM - 2 AM">12 AM - 2 AM</option>
+      <option value="Sleep_Time_Weekdays_After 2 AM">After 2 AM</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">Do you feel burnt out or mentally exhausted due to school-related digital activities?</label>
+    <select formControlName="burnout" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <option value="">Select</option>
+      <option value="Burnout_Exhaustion_Never">Never</option>
+      <option value="Burnout_Exhaustion_Rarely">Rarely</option>
+      <option value="Burnout_Exhaustion_Sometimes">Sometimes</option>
+      <option value="Burnout_Exhaustion_Often">Often</option>
+      <option value="Burnout_Exhaustion_Always">Always</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">Do you take regular breaks when using devices for studying?</label>
+    <select formControlName="study_breaks" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <option value="">Select</option>
+      <option value="Regular_Breaks_Studying_Yes">Yes</option>
+      <option value="Regular_Breaks_Studying_No">No</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">How motivated are you to study on a daily basis?</label>
+    <select formControlName="motivation" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <option value="">Select</option>
+      <option value="Motivation_Not motivated">Not motivated</option>
+      <option value="Motivation_Slightly motivated">Slightly motivated</option>
+      <option value="Motivation_Neutral">Neutral</option>
+      <option value="Motivation_Motivated">Motivated</option>
+      <option value="Motivation_Very motivated">Very motivated</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">What usually triggers your motivation to study? (Select all that apply)</label>
+    <div class="flex flex-wrap gap-2">
+      <label>
+        <input type="checkbox" value="MotivationTrigger_Upcoming Deadlines" (change)="onCheckboxChange($event, 'motivation_triggers')" /> Upcoming Deadlines
+      </label>
+      <label>
+        <input type="checkbox" value="MotivationTrigger_Exams" (change)="onCheckboxChange($event, 'motivation_triggers')" /> Exams
+      </label>
+      <label>
+        <input type="checkbox" value="MotivationTrigger_Study group discussions" (change)="onCheckboxChange($event, 'motivation_triggers')" /> Study group discussions
+      </label>
+      <label>
+        <input type="checkbox" value="MotivationTrigger_Personal goals" (change)="onCheckboxChange($event, 'motivation_triggers')" /> Personal goals
+      </label>
+      <label>
+        <input type="checkbox" value="MotivationTrigger_Instructor reminders" (change)="onCheckboxChange($event, 'motivation_triggers')" /> Instructor reminders
+      </label>
+      <label>
+        <input type="checkbox" value="MotivationTrigger_Parental/guardian pressure" (change)="onCheckboxChange($event, 'motivation_triggers')" /> Parental/guardian pressure
+      </label>
+      <label>
+        <input type="checkbox" value="MotivationTrigger_Other" (change)="onCheckboxChange($event, 'motivation_triggers')" /> Other
+      </label>
+    </div>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">Do you consider yourself productive when studying using digital tools?</label>
+    <select formControlName="productivity" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <option value="">Select</option>
+      <option value="Productive_Yes">Yes</option>
+      <option value="Productive_No">No</option>
+      <option value="Productive_Sometimes">Sometimes</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">Which of the following tools do you use for productivity? (Select all that apply)</label>
+    <div class="flex flex-wrap gap-2">
+      <label>
+        <input type="checkbox" value="ProductivityTool_Notion" (change)="onCheckboxChange($event, 'productivity_tools')" /> Notion
+      </label>
+      <label>
+        <input type="checkbox" value="ProductivityTool_Trello" (change)="onCheckboxChange($event, 'productivity_tools')" /> Trello
+      </label>
+      <label>
+        <input type="checkbox" value="ProductivityTool_Google Calender" (change)="onCheckboxChange($event, 'productivity_tools')" /> Google Calender
+      </label>
+      <label>
+        <input type="checkbox" value="ProductivityTool_Pomodoro Timer" (change)="onCheckboxChange($event, 'productivity_tools')" /> Pomodoro Timer
+      </label>
+      <label>
+        <input type="checkbox" value="ProductivityTool_Forest App" (change)="onCheckboxChange($event, 'productivity_tools')" /> Forest App
+      </label>
+      <label>
+        <input type="checkbox" value="ProductivityTool_None" (change)="onCheckboxChange($event, 'productivity_tools')" /> None
+      </label>
+      <label>
+        <input type="checkbox" value="ProductivityTool_Other" (change)="onCheckboxChange($event, 'productivity_tools')" /> Other
+      </label>
+    </div>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">How often do you get distracted by social media during study time?</label>
+    <select formControlName="social_media_distraction" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <option value="">Select</option>
+      <option value="Social_Distraction_Never">Never</option>
+      <option value="Social_Distraction_Rarely">Rarely</option>
+      <option value="Social_Distraction_Sometimes">Sometimes</option>
+      <option value="Social_Distraction_Often">Often</option>
+      <option value="Social_Distraction_Always">Always</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">What platform distracts you the most during school hours?</label>
+    <select formControlName="distraction_platform" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <option value="">Select</option>
+      <option value="Distracting_Platform_Facebook">Facebook</option>
+      <option value="Distracting_Platform_TikTok">TikTok</option>
+      <option value="Distracting_Platform_Youtube">Youtube</option>
+      <option value="Distracting_Platform_Instagram">Instagram</option>
+      <option value="Distracting_Platform_Twitter/X">Twitter/X</option>
+      <option value="Distracting_Platform_Other">Other</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">Do you use apps or methods to block distractions while studying?</label>
+    <select formControlName="block_distractions" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <option value="">Select</option>
+      <option value="Distraction_Blocking_Yes">Yes</option>
+      <option value="Distraction_Blocking_No">No</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">Which of the following platforms do you use regularly for academic purposes? (Select all that apply)</label>
+    <div class="flex flex-wrap gap-2">
+      <label>
+        <input type="checkbox" value="AcademicPlatform_Google Classroom" (change)="onCheckboxChange($event, 'academic_tools')" /> Google Classroom
+      </label>
+      <label>
+        <input type="checkbox" value="AcademicPlatform_Zoom/ Google Meet" (change)="onCheckboxChange($event, 'academic_tools')" /> Zoom/ Google Meet
+      </label>
+      <label>
+        <input type="checkbox" value="AcademicPlatform_GitHub" (change)="onCheckboxChange($event, 'academic_tools')" /> GitHub
+      </label>
+      <label>
+        <input type="checkbox" value="AcademicPlatform_VS Code/ IDEs" (change)="onCheckboxChange($event, 'academic_tools')" /> VS Code/ IDEs
+      </label>
+      <label>
+        <input type="checkbox" value="AcademicPlatform_Replit/ Online compilers" (change)="onCheckboxChange($event, 'academic_tools')" /> Replit/ Online compilers
+      </label>
+      <label>
+        <input type="checkbox" value="AcademicPlatform_ChatGPT or similiar" (change)="onCheckboxChange($event, 'academic_tools')" /> ChatGPT or similar
+      </label>
+      <label>
+        <input type="checkbox" value="AcademicPlatform_Discord/ Slack" (change)="onCheckboxChange($event, 'academic_tools')" /> Discord/ Slack
+      </label>
+      <label>
+        <input type="checkbox" value="AcademicPlatform_Other" (change)="onCheckboxChange($event, 'academic_tools')" /> Other
+      </label>
+    </div>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">Do you think you rely too much on digital tools (e.g., AI, Google, Youtube) for completing academic tasks?</label>
+    <select formControlName="digital_reliance" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <option value="">Select</option>
+      <option value="Over_Reliance_Yes">Yes</option>
+      <option value="Over_Reliance_No">No</option>
+      <option value="Over_Reliance_Not sure">Not sure</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">Any digital habits you want to share that help you study better?</label>
+    <textarea formControlName="digital_habits" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400"></textarea>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">What digital behavior do you think you need to maintain and somehow improve?</label>
+    <textarea formControlName="digital_change" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400"></textarea>
+  </div>
+  <div>
+    <label class="block font-semibold mb-1 text-gray-700">Do you think your current digital habits affect your grades or performance? Why or why not?</label>
+    <textarea formControlName="digital_reflection" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400"></textarea>
+  </div>
+  <div class="flex gap-4 mt-6">
+    <button type="submit" class="bg-primary-blue text-white px-6 py-2 rounded-xl font-semibold transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-500 hover:text-white hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed" [disabled]="isSubmitting || !surveyForm.valid">
+      {{ isSubmitting ? 'Predicting...' : 'Submit' }}
+    </button>
+    <button type="button" (click)="onClose()" class="bg-gray-300 text-gray-800 px-6 py-2 rounded-xl font-semibold ml-2 transition-all duration-200 hover:bg-cyan-100 hover:text-cyan-700 hover:scale-105">Quit</button>
+  </div>
+  <div *ngIf="predictionResult" class="mt-6 p-4 bg-green-100 rounded-xl">
+    <h3 class="font-bold text-green-700">Prediction Result</h3>
+    <div *ngIf="predictionResult.prediction">Productivity: <span class="font-semibold">{{ predictionResult.prediction }}</span></div>
+    <div *ngIf="predictionResult.confidence">Confidence: <span class="font-semibold">{{ predictionResult.confidence }}%</span></div>
+    <div *ngIf="predictionResult.predicted_class">
+      Classifier: <span class="font-semibold">{{ predictionResult.predicted_class }}</span>
+    </div>
+    <div *ngIf="predictionResult.arm_rules">
+      <h4 class="mt-2 font-semibold">Relevant Patterns:</h4>
+      <ul>
+        <li *ngFor="let rule of predictionResult.arm_rules">
+          <span>{{ rule.antecedent }} &rarr; {{ rule.consequent }} (Conf: {{ rule.confidence }}, Lift: {{ rule.lift }})</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div *ngIf="error" class="mt-4 text-red-600">{{ error }}</div>
+</form>
